@@ -1,5 +1,8 @@
 import React from "react";
 import HeroSection from "../components/HeroSection/HeroSection";
+import WhatWeDoSection from "../components/WhatWeDoSection/WhatWeDoSection";
+import ProjectsSection from "../components/ProjectsSection/ProjectsSection";
+
 const heroCTAData = {
     children: "How We Do It",
 };
@@ -16,6 +19,8 @@ export default function IndexPage() {
                 heroTitle="Let’s Empower People"
                 heroCTAProps={heroSectionData.heroCTAProps}
             />
+            <WhatWeDoSection/>
+            <ProjectsSection/>
         </div>
     );
 }

@@ -8,8 +8,7 @@
     position: relative
     width: 100vw
 
-.image-slider,
-.image-slider.animate-enter
+.image-slider
     display: block
     left: 0
     object-fit: cover
@@ -20,8 +19,7 @@
     opacity: 1
     animation: animate-enter-frames 3s
 
-.hero-title,
-.hero-title.animate-enter3
+.hero-title
     left: 72px
     letter-spacing: 3.00px
     line-height: 170px
@@ -37,19 +35,5 @@
     align-items: center
     width: 100vw
     height: fit-content
-
-@keyframes animate-enter-frames
-    from
-        opacity: 0
-    to
-        opacity: 1
-
-@keyframes animate-enter3-frames
-    from
-        opacity: 0
-        transform: translate(0, 100px)
-    to
-        opacity: 1
-        transform: translate(0, 0)
 
 @media screen and ( max-width: 1440px )
