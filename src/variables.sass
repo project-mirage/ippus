@@ -10,7 +10,484 @@ $font-size-l: 136px
 $font-size-l2: 20px
 $font-family-inter: "Inter", Helvetica
 $font-family-merriweather: "Merriweather", Helvetica
+/* Variables */
+
+$ippus---2125: rgba(0, 11, 25, 1)
+$ippus---21210: rgba(0, 23, 51, 1)
+$azure-radiance: rgba(0, 119, 255, 1)
+$havelock-blue: rgba(79, 148, 226, 1)
+$grape: rgba(100, 44, 153, 1)
+$hawkes-blue: rgba(204, 228, 255, 1)
+$jelly-bean: rgba(226, 89, 79, 1)
+$lily-white: rgba(229, 241, 255, 1)
+$sweet-pink: rgba(248, 165, 159, 1)
+$alabaster: rgba(249, 250, 255, 1)
+$corn-field: rgba(251, 250, 201, 1)
+$papaya-whip: rgba(252, 239, 210, 1)
+$oasis: rgba(253, 239, 209, 1)
+$oasis-2: rgba(254, 239, 208, 1)
+$ippus---21250: rgba(255, 17, 0, 1)
+$ippus---21290: rgba(255, 207, 203, 1)
+$ippus---21295: rgba(255, 230, 229, 1)
+$ippus---21299: rgba(255, 250, 249, 1)
+$ippus---212100: rgba(255, 255, 255, 1)
+
+$font-size-xxs: 10px
+$font-size-m: 18px
+$font-size-l: 20px
+$font-size-xl: 22px
+$font-size-xxxl: 28px
+$font-size-xxxxl: 48px
+$font-size-xxxxl: 96px
+$font-size-s2: 14px
+$font-size-m2: 16px
+$font-size-xxl2: 24px
+$font-size-xxxl2: 32px
+
+$font-family-dm_sans: "DM Sans"
+$font-family-futura-bold: "Futura-Bold"
+$font-family-inter: "Inter"
+$font-family-inter-bold: "Inter-Bold"
+$font-family-inter-medium: "Inter-Medium"
+$font-family-inter-regular: "Inter-Regular"
+$font-family-inter-semibold: "Inter-SemiBold"
+$font-family-lato: "Lato"
+$font-family-lato-black: "Lato-Black"
+$font-family-lato-bold: "Lato-Bold"
+$font-family-lato-regular: "Lato-Regular"
+$font-family-merriweather: "Merriweather"
+$font-family-merriweather-bold: "Merriweather-Bold"
+$font-family-poppins: "Poppins"
+$font-family-wendy_one: "Wendy One"
+$font-family-wendy_one-regular: "Wendy One-Regular"
 
 body
     margin: 0
     padding: 0
+    overflow-x: hidden
+
+/* Classes */
+
+.poppins-bold-midnight-28px
+    color: $ippus---21210
+    font-family: $font-family-poppins
+    font-size: $font-size-xxxl
+    font-weight: 700
+    font-style: normal
+
+.lato-normal-grape-16px
+    color: $grape
+    font-family: $font-family-lato
+    font-size: $font-size-m2
+    font-weight: 400
+    font-style: normal
+
+.poppins-bold-midnight-24px
+    color: $ippus---21210
+    font-family: $font-family-poppins
+    font-size: $font-size-xxl2
+    font-weight: 700
+    font-style: normal
+
+.inter-normal-midnight-20px
+    color: $ippus---21210
+    font-family: $font-family-inter
+    font-size: $font-size-l
+    font-weight: 400
+    font-style: normal
+
+.inter-semi-bold-soapstone-20px
+    color: $ippus---21299
+    font-family: $font-family-inter-semibold
+    font-size: $font-size-l
+    font-weight: 600
+    font-style: normal
+
+.wendyone-regular-normal-oasis-32px
+    color: $oasis
+    font-family: $font-family-wendy_one-regular
+    font-size: $font-size-xxxl2
+    font-weight: 400
+    font-style: normal
+
+.inter-regular-normal-midnight-16px
+    color: $ippus---21210
+    font-family: $font-family-inter-regular
+    font-size: $font-size-m2
+    font-weight: 400
+    font-style: normal
+
+.inter-medium-white-18px
+    color: $ippus---212100
+    font-family: $font-family-inter
+    font-size: 18px
+    font-weight: 500
+    font-style: normal
+
+.inter-bold-midnight-22px
+    color: $ippus---21210
+    font-family: $font-family-inter-bold
+    font-size: 22px
+    font-weight: 700
+    font-style: normal
+
+.lato-normal-oasis-18px
+    color: $oasis-2
+    font-family: $font-family-lato
+    font-size: $font-size-m
+    font-weight: 400
+    font-style: normal
+
+.lato-bold-grape-10px
+    color: $grape
+    font-family: $font-family-lato-bold
+    font-size: $font-size-xxs
+    font-weight: 700
+    font-style: normal
+
+.merriweather-bold-soapstone-64px
+    color: $ippus---21299
+    font-family: $font-family-merriweather
+    font-size: 64px
+    font-weight: 700
+    font-style: normal
+.merriweather-bold-darkblue-136px
+    color: #000
+    font-family: $font-family-merriweather
+    font-size: 136px
+    font-weight: 700
+    font-style: normal
+
+.poppins-bold-blue-charcoal-24px
+    color: $ippus---2125
+    font-family: $font-family-poppins
+    font-size: $font-size-xxl2
+    font-weight: 700
+    font-style: normal
+
+.wendyone-normal-oasis-42px
+    color: $oasis-2
+    font-family: $font-family-wendy_one
+    font-size: 42px
+    font-weight: 400
+    font-style: normal
+
+.inter-bold-midnight-32px
+    color: $ippus---21210
+    font-family: $font-family-inter-bold
+    font-size: $font-size-xxxl2
+    font-weight: 700
+    font-style: normal
+
+.lato-bold-grape-13px
+    color: $grape
+    font-family: $font-family-lato
+    font-size: 13px
+    font-weight: 700
+    font-style: normal
+
+.inter-medium-blue-charcoal-18px
+    color: $ippus---2125
+    font-family: $font-family-inter-medium
+    font-size: $font-size-m
+    font-weight: 500
+    font-style: normal
+
+.lato-bold-grape-10px
+    color: $grape
+    font-family: $font-family-lato
+    font-size: $font-size-xxs
+    font-weight: 700
+    font-style: normal
+
+.inter-normal-midnight-14px
+    color: $ippus---21210
+    font-family: $font-family-inter
+    font-size: $font-size-s2
+    font-weight: 400
+    font-style: normal
+
+.inter-normal-midnight-24px
+    color: $ippus---21210
+    font-family: $font-family-inter
+    font-size: $font-size-xxl2
+    font-weight: 400
+    font-style: normal
+
+.merriweather-bold-blue-charcoal-96px
+    color: $ippus---2125
+    font-family: $font-family-merriweather
+    font-size: 96px
+    font-weight: 700
+    font-style: normal
+
+.inter-medium-blue-charcoal-18px
+    color: $ippus---2125
+    font-family: $font-family-inter
+    font-size: 18px
+    font-weight: 500
+    font-style: normal
+
+.merriweather-bold-soapstone-136px
+    color: $ippus---21299
+    font-family: $font-family-merriweather
+    font-size: 136px
+    font-weight: 700
+    font-style: normal
+
+.lato-normal-corn-field-16px
+    color: $corn-field
+    font-family: $font-family-lato
+    font-size: $font-size-m2
+    font-weight: 400
+    font-style: normal
+
+.inter-normal-midnight-16px
+    color: $ippus---21210
+    font-family: $font-family-inter
+    font-size: $font-size-m2
+    font-weight: 400
+    font-style: normal
+
+.inter-normal-blue-charcoal-16px
+    color: $ippus---2125
+    font-family: $font-family-inter
+    font-size: $font-size-m2
+    font-weight: 400
+    font-style: normal
+
+.merriweather-bold-blue-charcoal-96px
+    color: $ippus---2125
+    font-family: $font-family-merriweather-bold
+    font-size: 96px
+    font-weight: 700
+    font-style: normal
+
+.dmsans-normal-midnight-20px
+    color: $ippus---21210
+    font-family: $font-family-dm_sans
+    font-size: $font-size-l
+    font-weight: 400
+    font-style: normal
+
+.wendyone-regular-normal-oasis-70px
+    color: $oasis-2
+    font-family: $font-family-wendy_one-regular
+    font-size: 70px
+    font-weight: 400
+    font-style: normal
+
+.lato-regular-normal-corn-field-16px
+    color: $corn-field
+    font-family: $font-family-lato-regular
+    font-size: $font-size-m2
+    font-weight: 400
+    font-style: normal
+
+.lato-bold-grape-13px
+    color: $grape
+    font-family: $font-family-lato-bold
+    font-size: 13px
+    font-weight: 700
+    font-style: normal
+
+.inter-bold-midnight-32px
+    color: $ippus---21210
+    font-family: $font-family-inter
+    font-size: $font-size-xxxl2
+    font-weight: 700
+    font-style: normal
+
+.inter-semi-bold-soapstone-20px
+    color: $ippus---21299
+    font-family: $font-family-inter
+    font-size: $font-size-l
+    font-weight: 600
+    font-style: normal
+
+.merriweather-bold-midnight-64px
+    color: $ippus---21210
+    font-family: $font-family-merriweather
+    font-size: 64px
+    font-weight: 700
+    font-style: normal
+
+.inter-regular-normal-blue-charcoal-16px
+    color: $ippus---2125
+    font-family: $font-family-inter-regular
+    font-size: $font-size-m2
+    font-weight: 400
+    font-style: normal
+
+.inter-regular-normal-midnight-14px
+    color: $ippus---21210
+    font-family: $font-family-inter-regular
+    font-size: $font-size-s2
+    font-weight: 400
+    font-style: normal
+
+.merriweather-bold-blue-charcoal-48px
+    color: $ippus---2125
+    font-family: $font-family-merriweather
+    font-size: 48px
+    font-weight: 700
+    font-style: normal
+
+.lato-bold-oasis-16px
+    color: $oasis
+    font-family: $font-family-lato
+    font-size: $font-size-m2
+    font-weight: 700
+    font-style: normal
+
+.border-2px-oasis
+    border-width: 2px
+    border-style: solid
+    border-color: $oasis
+
+.wendyone-normal-oasis-32px
+    color: $oasis
+    font-family: $font-family-wendy_one
+    font-size: $font-size-xxxl2
+    font-weight: 400
+    font-style: normal
+
+.inter-medium-midnight-18px
+    color: $ippus---21210
+    font-family: $font-family-inter
+    font-size: 18px
+    font-weight: 500
+    font-style: normal
+
+.lato-regular-normal-oasis-18px
+    color: $oasis-2
+    font-family: $font-family-lato-regular
+    font-size: $font-size-m
+    font-weight: 400
+    font-style: normal
+
+.lato-normal-grape-18px
+    color: $grape
+    font-family: $font-family-lato
+    font-size: $font-size-m
+    font-weight: 400
+    font-style: normal
+
+.inter-bold-midnight-22px
+    color: $ippus---21210
+    font-family: $font-family-inter
+    font-size: $font-size-xl
+    font-weight: 700
+    font-style: normal
+
+.inter-semi-bold-soapstone-16px
+    color: $ippus---21299
+    font-family: $font-family-inter
+    font-size: $font-size-m2
+    font-weight: 600
+    font-style: normal
+
+.lato-bold-oasis-18px
+    color: $oasis
+    font-family: $font-family-lato
+    font-size: $font-size-m
+    font-weight: 700
+    font-style: normal
+
+.inter-normal-white-16px
+    color: $ippus---212100
+    font-family: $font-family-inter
+    font-size: $font-size-m2
+    font-weight: 400
+    font-style: normal
+
+.poppins-normal-midnight-16px
+    color: $ippus---21210
+    font-family: $font-family-poppins
+    font-size: $font-size-m2
+    font-weight: 400
+    font-style: normal
+
+.inter-bold-blue-charcoal-24px
+    color: $ippus---2125
+    font-family: $font-family-inter
+    font-size: $font-size-xxl2
+    font-weight: 700
+    font-style: normal
+
+.lato-regular-normal-grape-16px
+    color: $grape
+    font-family: $font-family-lato-regular
+    font-size: $font-size-m2
+    font-weight: 400
+    font-style: normal
+
+.lato-bold-oasis-16px
+    color: $oasis
+    font-family: $font-family-lato-bold
+    font-size: $font-size-m2
+    font-weight: 700
+    font-style: normal
+
+.wendyone-normal-oasis-70px
+    color: $oasis-2
+    font-family: $font-family-wendy_one
+    font-size: 70px
+    font-weight: 400
+    font-style: normal
+
+.inter-regular-normal-midnight-20px
+    color: $ippus---21210
+    font-family: $font-family-inter-regular
+    font-size: $font-size-l
+    font-weight: 400
+    font-style: normal
+
+.inter-semi-bold-midnight-28px
+    color: $ippus---21210
+    font-family: $font-family-inter
+    font-size: $font-size-xxxl
+    font-weight: 600
+    font-style: normal
+
+.inter-bold-blue-charcoal-24px
+    color: $ippus---2125
+    font-family: $font-family-inter-bold
+    font-size: $font-size-xxl2
+    font-weight: 700
+    font-style: normal
+
+.lato-bold-oasis-18px
+    color: $oasis
+    font-family: $font-family-lato-bold
+    font-size: $font-size-m
+    font-weight: 700
+    font-style: normal
+
+.lato-regular-normal-grape-18px
+    color: $grape
+    font-family: $font-family-lato-regular
+    font-size: $font-size-m
+    font-weight: 400
+    font-style: normal
+
+.inter-semi-bold-white-28px
+    color: $ippus---212100
+    font-family: $font-family-inter
+    font-size: $font-size-xxxl
+    font-weight: 600
+    font-style: normal
+
+.poppins-bold-blue-charcoal-34px
+    color: $ippus---2125
+    font-family: $font-family-poppins
+    font-size: 34px
+    font-weight: 700
+    font-style: normal
+
+.wendyone-regular-normal-oasis-42px
+    color: $oasis-2
+    font-family: $font-family-wendy_one-regular
+    font-size: 42px
+    font-weight: 400
+    font-style: normal
