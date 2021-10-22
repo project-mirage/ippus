@@ -5,6 +5,7 @@ import ProjectsSection from "../components/ProjectsSection/ProjectsSection";
 import NavBar from "../components/NavBar/NavBar";
 import HowItWorks from "../components/HowItWorks/HowItWorks";
 import WhoWeAre from "../components/WhoWeAre/WhoWeAre";
+import Footer from "../components/Footer/Footer";
 
 const heroCTAData = {
     children: "How We Do It",
@@ -29,6 +30,7 @@ export default function IndexPage() {
             <ProjectsSection />
             <HowItWorks />
             <WhoWeAre />
+            <Footer />
         </div>
     );
 }
