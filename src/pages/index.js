@@ -3,6 +3,7 @@ import HeroSection from "../components/HeroSection/HeroSection";
 import WhatWeDoSection from "../components/WhatWeDoSection/WhatWeDoSection";
 import ProjectsSection from "../components/ProjectsSection/ProjectsSection";
 import NavBar from "../components/NavBar/NavBar";
+import HowItWorks from "../components/HowItWorks/HowItWorks";
 
 const heroCTAData = {
     children: "How We Do It",
@@ -25,6 +26,7 @@ export default function IndexPage() {
             />
             <WhatWeDoSection />
             <ProjectsSection />
+            <HowItWorks />
         </div>
     );
 }
