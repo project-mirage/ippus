@@ -11,7 +11,7 @@ export default function HeroSection(props) {
             <div className="overlap-group">
                 <div className="image-slider animate-enter" src={imageSlider}>
                     <div className="heroSectionContainer">
-                        <h1 className="hero-title merriweather-bold-soapstone-136px animate-enter3">
+                        <h1 className="hero-title merriweather-bold-soapstone-136px">
                             {heroTitle}
                         </h1>
                         <div className="controls">
