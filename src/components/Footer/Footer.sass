@@ -7,96 +7,109 @@
     position: relative
     width: 1440px
     transform: translate(0, 25px)
+    margin: 0 auto
+    width: 100%
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+    margin-top: 50px
 
-.make-a-donation-copy
+.footerContainer
+    width: 70vw
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+
+.footer-make-a-donation-copy
     left: 72px
     letter-spacing: 0
     line-height: 24px
-    position: absolute
+
     top: 104px
     width: 419px
 
-.make-a-donation-copy-1
+.footer-make-a-donation-copy-1
     left: 72px
     letter-spacing: 0.80px
-    position: absolute
+
     top: 368px
     width: 237px
 
-.make-a-donation-copy-2
+.footer-make-a-donation-copy-2
     left: 1126px
     letter-spacing: 0.80px
-    position: absolute
+
     top: 368px
 
-.make-a-donation-copy-3
+.footer-make-a-donation-copy-3
     left: 620px
     letter-spacing: -0.40px
     line-height: 24px
-    position: absolute
+
     top: 100px
     white-space: nowrap
     width: 160px
 
-.make-a-donation-copy-4
+.footer-make-a-donation-copy-4
     left: 840px
     letter-spacing: -0.40px
     line-height: 24px
-    position: absolute
+
     top: 100px
     white-space: nowrap
     width: 159px
 
-.make-a-donation-copy-5
+.footer-make-a-donation-copy-5
     left: 620px
     letter-spacing: -0.40px
     line-height: 24px
-    position: absolute
+
     top: 132px
     white-space: nowrap
     width: 160px
 
-.make-a-donation-copy-6
+.footer-make-a-donation-copy-6
     left: 840px
     letter-spacing: -0.40px
     line-height: 24px
-    position: absolute
+
     top: 132px
     white-space: nowrap
     width: 159px
 
-.make-a-donation-copy-7
+.footer-make-a-donation-copy-7
     left: 620px
     letter-spacing: -0.40px
     line-height: 24px
-    position: absolute
+
     top: 164px
     white-space: nowrap
     width: 160px
 
-.make-a-donation-copy-8
+.footer-make-a-donation-copy-8
     left: 840px
     letter-spacing: -0.40px
     line-height: 24px
-    position: absolute
+
     top: 164px
     white-space: nowrap
     width: 159px
 
-.make-a-donation-copy-9
+.footer-make-a-donation-copy-9
     left: 840px
     letter-spacing: -0.40px
     line-height: 24px
-    position: absolute
+
     top: 196px
     white-space: nowrap
     width: 159px
 
-.make-a-donation-copy-10
+.footer-make-a-donation-copy-10
     left: 620px
     letter-spacing: -0.40px
     line-height: 24px
-    position: absolute
+
     top: 196px
     white-space: nowrap
     width: 160px
@@ -104,7 +117,7 @@
 .preview
     height: 28px
     left: 74px
-    position: absolute
+
     top: 51px
     width: 104px
 
@@ -112,7 +125,7 @@
     left: 620px
     letter-spacing: -0.08px
     line-height: 40px
-    position: absolute
+
     top: 48px
     white-space: nowrap
     width: 160px
@@ -121,7 +134,7 @@
     left: 840px
     letter-spacing: -0.08px
     line-height: 40px
-    position: absolute
+
     top: 48px
     white-space: nowrap
     width: 159px
@@ -131,10 +144,21 @@
     display: block
     height: 244px
     left: 1166px
-    position: absolute
+
     top: 48px
     width: 281px
-    transform: rotate(25deg)
+    animation: animate-enter-frames 1000ms
+
+.socialLinks
+    margin: 20px
+.pages
+    margin: 20px
+.registrations
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    margin-top: 35px
 
 @keyframes animate-enter-frames
     from
@@ -151,5 +175,3 @@
     to
         opacity: 1
         transform: translate(0,0)
-
-@import url("https://fonts.googleapis.com/css?family=Merriweather:700|Inter:400,700,500,600|Poppins:400,700|DM+Sans:400")
