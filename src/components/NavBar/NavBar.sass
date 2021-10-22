@@ -1,0 +1,85 @@
+@import '../../variables'
+
+.nav-desktop,
+.nav-desktop.animate-enter1
+    background-color: $ippus---21299
+    animation: animate-enter1-frames 250ms
+    border-radius: 66px
+    box-shadow: 0px 4px 24px #1f2d3d1a
+    height: 84px
+    width: 70vw
+    margin: 0 auto
+    top: 50px
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: 500
+    justify-content: space-between
+    padding-right: 50px
+    padding-left: 50px
+    position: fixed
+    top: 50px
+    left: 50%
+    transform: translateX(-50%)
+
+.nav-elements
+    align-items: center
+    display: flex
+    justify-content: flex-end
+    min-width: 1215.62px
+
+.nav-left
+    height: 29px
+    width: 116px
+
+.nav-right
+    align-items: center
+    display: flex
+    min-width: 556px
+
+.nav-home-link
+    letter-spacing: -0.08px
+    line-height: 40px
+    min-height: 40px
+    white-space: nowrap
+    width: 54px
+
+.nav-home-link-1
+    letter-spacing: -0.08px
+    line-height: 40px
+    margin-left: 64px
+    min-height: 40px
+    white-space: nowrap
+    width: 55px
+
+.nav-home-link-2
+    letter-spacing: -0.08px
+    line-height: 40px
+    margin-left: 64px
+    min-height: 40px
+    white-space: nowrap
+    width: 74px
+
+.nav-cta,
+.nav-cta.animate-enter
+    animation: animate-enter-frames 250ms
+    display: block
+    height: 44px
+    margin-left: 63px
+    width: 176px
+
+@keyframes animate-enter1-frames
+    from
+        opacity: 0
+        filter: blur(10px)
+    to
+        opacity: 1
+        filter: none
+
+@keyframes animate-enter-frames
+    from
+        opacity: 0
+        transform: translate(0, 25px)
+    to
+        opacity: 1
+        transform: translate(0,0)
