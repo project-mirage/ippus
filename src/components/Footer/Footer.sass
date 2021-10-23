@@ -120,6 +120,7 @@
 
     top: 51px
     width: 104px
+    margin-bottom: 20px
 
 .preview-1
     left: 620px
@@ -159,7 +160,11 @@
     align-items: center
     width: 100%
     margin-top: 35px
-
+.links
+    display: flex
+    justify-content: space-between
+    align-items: center
+    max-width: 90vw
 @keyframes animate-enter-frames
     from
         opacity: 0
@@ -178,4 +183,27 @@
 
 @media screen and ( max-width: 375px )
     .footer-desktop
-        margin-top: 450px !important
+        margin-top: 350px !important
+    .footerContainer
+        justify-content: center
+        width: 90vw
+
+    .footer-make-a-donation-copy
+        width: auto
+
+    .leftdescription
+        width: 100%
+
+    .links
+        display: flex
+        justify-content: space-between
+        align-items: center
+        max-width: 90vw
+
+    .preview-3
+        display: none !important
+
+    .footer-make-a-donation-copy-1
+        font-size: 20px
+    .footer-make-a-donation-copy-2
+        display: none
