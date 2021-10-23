@@ -42,7 +42,7 @@ function Component3(props) {
             </h1>
             <div className="cardContainer">
                 <div
-                    className="hiw-microfinancing animate-enter1"
+                    className="hiw-card hiw-microfinancing animate-enter1"
                     data-id="148:933"
                 >
                     <WWDEmpowerIcon
@@ -63,7 +63,7 @@ function Component3(props) {
                     </p>
                 </div>
                 <div
-                    className="hiw-group-support animate-enter2"
+                    className="hiw-card hiw-group-support animate-enter2"
                     data-id="148:941"
                 >
                     <WWDEmpowerIcon
@@ -85,7 +85,7 @@ function Component3(props) {
                     </p>
                 </div>
                 <div
-                    className="hiw-well-being animate-enter3"
+                    className="hiw-card hiw-well-being animate-enter3"
                     data-id="148:951"
                 >
                     <HIWWellBeingIcon
@@ -106,7 +106,7 @@ function Component3(props) {
                     </p>
                 </div>
                 <div
-                    className="hiw-transformation animate-enter4"
+                    className="hiw-card hiw-transformation animate-enter4"
                     data-id="148:958"
                 >
                     <WWDEmpowerIcon
@@ -128,7 +128,7 @@ function Component3(props) {
                     </p>
                 </div>
                 <div
-                    className="hiw-transformation-1 animate-enter5"
+                    className="hiw-card hiw-transformation-1 animate-enter5"
                     data-id="148:967"
                 >
                     <WWDEmpowerIcon
@@ -202,7 +202,7 @@ const wWDEmpowerIcon4Data = {
 
 const component3Data = {
     heroTitle: "How It Works",
-    hiwMicrofinancing: "Interest-free Financing",
+    hiwMicrofinancing: "Financing",
     hiwMicrofinancing2:
         "Grassroots microfinancing organizations offer training, support, and reliable saving, borrowing ...",
     hiwGroupSupport: "Group Support",
