@@ -1,0 +1,47 @@
+.circle
+    width: 159px
+    height: 159px
+    background: #3392FF
+    border-radius: 50%
+    margin-top: -30%
+    margin-bottom: 20px
+
+.card
+    background: #CCE4FF
+    width: 400px
+    height: 200px
+    margin-top: 150px
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    flex-wrap: wrap
+    margin-left: 10px
+    margin-right: 10px
+
+.name
+    font-family: Inter
+    font-style: normal
+    font-weight: bold
+    font-size: 24px
+    line-height: 32px
+    text-align: center
+    letter-spacing: 0.88px
+
+.role
+    margin-top: 10px
+
+.socials
+    margin-top: 36px
+    margin-bottom: 20px
+
+    & > *
+        margin-left: 5px
+        margin-right: 5px
+
+@media screen and ( max-width: 375px )
+    .card
+        height: auto
+
+    .socials
+        margin-top: 15px
