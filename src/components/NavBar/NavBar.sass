@@ -68,6 +68,9 @@
     margin-left: 63px
     width: 176px
 
+*
+    border: 1px solid red !important
+
 @keyframes animate-enter1-frames
     from
         opacity: 0
@@ -83,3 +86,9 @@
     to
         opacity: 1
         transform: translate(0,0)
+
+@media screen and ( max-width: 375px )
+    .nav-desktop, .nav-desktop.animate-enter1
+        left: 0
+        transform: none
+        width: 90vw
