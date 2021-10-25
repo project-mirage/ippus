@@ -15,7 +15,7 @@
     margin-top: 50px
 
 .footerContainer
-    width: 70vw
+    width: 80vw
     display: flex
     justify-content: space-between
     align-items: center
@@ -131,7 +131,7 @@
     height: 244px
     left: 1166px
     top: 48px
-    animation: animate-enter-frames 1000ms
+    animation: footer-image-anim 1000ms
 
 .socialLinks
     margin: 20px
@@ -162,7 +162,7 @@
     align-items: flex-start
     flex-wrap: wrap
 
-@keyframes animate-enter-frames
+@keyframes footer-image-anim
     from
         opacity: 0
         transform: rotate(25deg)
@@ -178,9 +178,9 @@
         opacity: 1
         transform: translate(0,0)
 
-@media screen and ( max-width: 375px )
+@media screen and ( max-width: 450px )
     .footer-desktop
-        margin-top: 350px !important
+        margin-top: 50px !important
 
     .footerContainer
         justify-content: center
