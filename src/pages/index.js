@@ -8,31 +8,63 @@ import WhoWeAre from "../components/WhoWeAre/WhoWeAre";
 import Cards from "../components/Cards/Cards";
 import Footer from "../components/Footer/Footer";
 
-const heroCTAData = {
-    children: "How We Do It",
-};
-
-const heroSectionData = {
-    heroCTAProps: heroCTAData,
-};
+import image1 from "../images/Image1.jpg";
+import image2 from "../images/Image2.jpg";
+import image3 from "../images/Image3.jpg";
+import image4 from "../images/Image4.jpg";
+import image5 from "../images/Image5.jpg";
+import image6 from "../images/Image6.jpg";
+import image7 from "../images/Image7.jpg";
 
 export default function IndexPage() {
+    const sliderData = [
+        {
+            image: image1,
+            heroTitle: "Let's Empower People 1",
+            CTAText: "How We Do It 1",
+        },
+        {
+            image: image2,
+            heroTitle: "Let's Empower People 2",
+            CTAText: "How We Do It 2",
+        },
+        {
+            image: image3,
+            heroTitle: "Let's Empower People 3",
+            CTAText: "How We Do It 3",
+        },
+        {
+            image: image4,
+            heroTitle: "Let's Empower People 4",
+            CTAText: "How We Do It 4",
+        },
+        {
+            image: image5,
+            heroTitle: "Let's Empower People 5",
+            CTAText: "How We Do It 5",
+        },
+        {
+            image: image6,
+            heroTitle: "Let's Empower People 6",
+            CTAText: "How We Do It 6",
+        },
+        {
+            image: image7,
+            heroTitle: "Let's Empower People 7",
+            CTAText: "How We Do It 7",
+        },
+    ];
+
     return (
-        <div>
-            <div>
-                <NavBar />
-            </div>
-            <HeroSection
-                imageSlider="https://anima-uploads.s3.amazonaws.com/projects/6161355fdb61f69a919554e4/releases/616135bcb0ff15b21092b4ef/img/image-slider@1x.png"
-                heroTitle="Let’s Empower People"
-                heroCTAProps={heroSectionData.heroCTAProps}
-            />
+        <>
+            <NavBar />
+            <HeroSection sliderData={sliderData} />
             <WhatWeDoSection />
             <ProjectsSection />
             <HowItWorks />
             <WhoWeAre />
             <Cards />
             <Footer />
-        </div>
+        </>
     );
 }

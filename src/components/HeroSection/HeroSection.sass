@@ -3,6 +3,12 @@
     display: flex
     // min-width: 1440px
 
+.slick-dots
+    display: flex
+    justify-content: center
+    align-items: center
+    transform: translate(0, -7vh)
+
 .overlap-group-1
     height: 840px
     position: relative
@@ -35,14 +41,17 @@
     flex-wrap: wrap
     width: 100vw
     height: fit-content
+    position: relative
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
 
 .image-slider
-    background-image: url("https://anima-uploads.s3.amazonaws.com/projects/6161355fdb61f69a919554e4/releases/616135bcb0ff15b21092b4ef/img/image-slider@1x.png")
     background-size: cover
-    padding-top: 30vh
+    // padding-top: 20vh
 
 .controls
-    width: 100%
     display: flex
     justify-content: center
     align-items: center
