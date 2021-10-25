@@ -12,7 +12,7 @@ export default function HeroSection(props) {
     const settings = {
         dots: true,
         infinite: true,
-        arrow: false,
+        arrows: false,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
