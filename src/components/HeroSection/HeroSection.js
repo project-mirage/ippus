@@ -15,7 +15,7 @@ export default function HeroSection(props) {
         arrows: false,
         speed: 500,
         autoplay: true,
-        autoplaySpeed: 4500,
+        autoplaySpeed: 3000,
         slidesToShow: 1,
         slidesToScroll: 1,
         fade: true,

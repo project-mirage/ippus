@@ -1,6 +1,7 @@
 import React from "react";
 import TeamCard from "./TeamCard";
 import * as css from "./Collection.module.sass";
+import FadeInUp from "../../animations/FadeInUp";
 
 export default function Collection({ heading, teamData }) {
     return (
@@ -8,15 +9,17 @@ export default function Collection({ heading, teamData }) {
             <h1 className={css.heading}>{heading}</h1>
 
             {teamData.map((e) => (
-                <TeamCard
-                    name={e.name}
-                    role={e.role}
-                    image={e.image}
-                    instaLink={e.instaLink}
-                    waLink={e.waLink}
-                    twitLink={e.twitLink}
-                    fbLink={e.fbLink}
-                />
+                <FadeInUp>
+                    <TeamCard
+                        name={e.name}
+                        role={e.role}
+                        image={e.image}
+                        instaLink={e.instaLink}
+                        waLink={e.waLink}
+                        twitLink={e.twitLink}
+                        fbLink={e.fbLink}
+                    />
+                </FadeInUp>
             ))}
         </div>
     );

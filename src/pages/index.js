@@ -7,6 +7,7 @@ import HowItWorks from "../components/HowItWorks/HowItWorks";
 import WhoWeAre from "../components/WhoWeAre/WhoWeAre";
 import Cards from "../components/Cards/Cards";
 import Footer from "../components/Footer/Footer";
+import FadeInUp from "../animations/FadeInUp";
 
 import image1 from "../images/Image1.jpg";
 import image2 from "../images/Image2.jpg";
@@ -57,14 +58,30 @@ export default function IndexPage() {
 
     return (
         <>
-            <NavBar />
-            <HeroSection sliderData={sliderData} />
-            <WhatWeDoSection />
-            <ProjectsSection />
-            <HowItWorks />
-            <WhoWeAre />
-            <Cards />
-            <Footer />
+            <FadeInUp>
+                <NavBar />
+            </FadeInUp>
+            <FadeInUp>
+                <HeroSection sliderData={sliderData} />
+            </FadeInUp>
+            <FadeInUp>
+                <WhatWeDoSection />
+            </FadeInUp>
+            <FadeInUp>
+                <ProjectsSection />
+            </FadeInUp>
+            <FadeInUp>
+                <HowItWorks />
+            </FadeInUp>
+            <FadeInUp>
+                <WhoWeAre />
+            </FadeInUp>
+            <FadeInUp>
+                <Cards />
+            </FadeInUp>
+            <FadeInUp>
+                <Footer />
+            </FadeInUp>
         </>
     );
 }
