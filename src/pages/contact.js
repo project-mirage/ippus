@@ -18,9 +18,7 @@ export default function ContactPage() {
                     heading="Contact"
                 />
             </FadeInUp>
-            <FadeInUp>
-                <Footer />
-            </FadeInUp>
+            <Footer />
         </>
     );
 }

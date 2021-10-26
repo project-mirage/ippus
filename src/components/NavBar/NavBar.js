@@ -51,6 +51,13 @@ function NavDesktop(props) {
                     {navHomeLink2}
                 </Link>
                 <Link
+                    to="/competition"
+                    className="nav-home-link-2"
+                    data-id="I148:989;113:589"
+                >
+                    Competition
+                </Link>
+                <Link
                     to="/contact"
                     className="nav-home-link-2"
                     data-id="I148:989;113:589"

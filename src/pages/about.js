@@ -89,9 +89,7 @@ export default function AboutPage() {
                 <Collection heading="Our Team" teamData={teamData} />
             </FadeInUp>
 
-            <FadeInUp>
-                <Footer />
-            </FadeInUp>
+            <Footer />
         </div>
     );
 }

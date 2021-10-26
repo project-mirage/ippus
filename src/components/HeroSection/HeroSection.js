@@ -16,6 +16,7 @@ export default function HeroSection(props) {
         speed: 500,
         autoplay: true,
         autoplaySpeed: 3000,
+        pauseOnHover: false,
         slidesToShow: 1,
         slidesToScroll: 1,
         fade: true,
@@ -44,14 +45,13 @@ export default function HeroSection(props) {
                 <Slider {...settings}>
                     {sliderData.map((e) => (
                         <>
-                        <div className="colorBg">
-                            <img
-                                className="image-slider animate-enter heroImage"
-                                src={e.image}
-                                // style={{ backgroundImage: `url("${e.image}")` }}
-                            />
-
-                        </div>
+                            <div className="colorBg">
+                                <img
+                                    className="image-slider animate-enter heroImage"
+                                    src={e.image}
+                                    // style={{ backgroundImage: `url("${e.image}")` }}
+                                />
+                            </div>
                             <div className="heroSectionContainer">
                                 <h1 className="hero-title merriweather-bold-soapstone-136px">
                                     {e.heroTitle}

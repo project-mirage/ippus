@@ -2,6 +2,7 @@ import React from "react";
 import "./Footer.sass";
 import ippuslogofooter from "../../images/ippuslogofooter.png";
 import footer from "../../images/footer.png";
+import FadeIn from "../../animations/FadeIn"
 
 function App() {
     return <FooterDesktop {...footerDesktopData} />;
@@ -29,67 +30,72 @@ function FooterDesktop(props) {
     } = props;
 
     return (
-        <div className="footer-desktop animate-enter1">
-            <div className="footerContainer">
-                <div className="top">
-                    <div className="leftdescription">
-                        <img className="preview" src={preview} />
-                        <p className="footer-make-a-donation-copy inter-normal-midnight-16px">
-                            {makeADonationCopy}
-                        </p>
-                    </div>
+        <FadeIn>
+            <div className="footer-desktop animate-enter1">
+                <div className="footerContainer">
+                    <div className="top">
+                        <div className="leftdescription">
+                            <img className="preview" src={preview} />
+                            <p className="footer-make-a-donation-copy inter-normal-midnight-16px">
+                                {makeADonationCopy}
+                            </p>
+                        </div>
 
-                    <div className="links">
-                        <div className="socialLinks">
-                            <div className="preview-2 inter-bold-blue-charcoal-24px">
-                                {preview3}
+                        <div className="links">
+                            <div className="socialLinks">
+                                <div className="preview-2 inter-bold-blue-charcoal-24px">
+                                    {preview3}
+                                </div>
+                                <div className="footer-make-a-donation-copy-4 inter-normal-midnight-16px">
+                                    {makeADonationCopy5}
+                                </div>
+                                <div className="footer-make-a-donation-copy-6 inter-normal-midnight-16px">
+                                    {makeADonationCopy7}
+                                </div>
+                                <div className="footer-make-a-donation-copy-8 inter-normal-midnight-16px">
+                                    {makeADonationCopy9}
+                                </div>
+                                <div className="footer-make-a-donation-copy-9 inter-normal-midnight-16px">
+                                    {makeADonationCopy10}
+                                </div>
                             </div>
-                            <div className="footer-make-a-donation-copy-4 inter-normal-midnight-16px">
-                                {makeADonationCopy5}
-                            </div>
-                            <div className="footer-make-a-donation-copy-6 inter-normal-midnight-16px">
-                                {makeADonationCopy7}
-                            </div>
-                            <div className="footer-make-a-donation-copy-8 inter-normal-midnight-16px">
-                                {makeADonationCopy9}
-                            </div>
-                            <div className="footer-make-a-donation-copy-9 inter-normal-midnight-16px">
-                                {makeADonationCopy10}
+
+                            <div className="pages">
+                                <h1 className="preview-1 inter-bold-blue-charcoal-24px">
+                                    {preview2}
+                                </h1>
+                                <div className="footer-make-a-donation-copy-3 inter-normal-midnight-16px">
+                                    {makeADonationCopy4}
+                                </div>
+                                <div className="footer-make-a-donation-copy-5 inter-normal-midnight-16px">
+                                    {makeADonationCopy6}
+                                </div>
+                                <div className="footer-make-a-donation-copy-7 inter-normal-midnight-16px">
+                                    {makeADonationCopy8}
+                                </div>
+                                <div className="footer-make-a-donation-copy-10 inter-normal-midnight-16px">
+                                    {makeADonationCopy11}
+                                </div>
                             </div>
                         </div>
 
-                        <div className="pages">
-                            <h1 className="preview-1 inter-bold-blue-charcoal-24px">
-                                {preview2}
-                            </h1>
-                            <div className="footer-make-a-donation-copy-3 inter-normal-midnight-16px">
-                                {makeADonationCopy4}
-                            </div>
-                            <div className="footer-make-a-donation-copy-5 inter-normal-midnight-16px">
-                                {makeADonationCopy6}
-                            </div>
-                            <div className="footer-make-a-donation-copy-7 inter-normal-midnight-16px">
-                                {makeADonationCopy8}
-                            </div>
-                            <div className="footer-make-a-donation-copy-10 inter-normal-midnight-16px">
-                                {makeADonationCopy11}
-                            </div>
+                        <img
+                            className="preview-3 animate-enter"
+                            src={preview4}
+                        />
+                    </div>
+
+                    <div className="registrations">
+                        <div className="footer-make-a-donation-copy-1 inter-normal-midnight-20px">
+                            {makeADonationCopy2}
                         </div>
-                    </div>
-
-                    <img className="preview-3 animate-enter" src={preview4} />
-                </div>
-
-                <div className="registrations">
-                    <div className="footer-make-a-donation-copy-1 inter-normal-midnight-20px">
-                        {makeADonationCopy2}
-                    </div>
-                    <div className="footer-make-a-donation-copy-2 inter-normal-midnight-20px">
-                        {makeADonationCopy3}
+                        <div className="footer-make-a-donation-copy-2 inter-normal-midnight-20px">
+                            {makeADonationCopy3}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </FadeIn>
     );
 }
 
