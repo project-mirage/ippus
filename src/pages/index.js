@@ -58,9 +58,7 @@ export default function IndexPage() {
 
     return (
         <>
-            <FadeInUp>
-                <NavBar />
-            </FadeInUp>
+            <NavBar />
             <FadeInUp>
                 <HeroSection sliderData={sliderData} />
             </FadeInUp>

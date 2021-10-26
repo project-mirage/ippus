@@ -1,11 +1,10 @@
 import React from "react";
-import { Link } from "gatsby"
+import { Link } from "gatsby";
 import "./NavBar.sass";
 import ham from "../../images/ham.svg";
 import closeHam from "../../images/closeHam.svg";
 import useToggle from "../../hooks/useToggle";
 import HeroCTA from "../HeroCTA/HeroCTA";
-
 
 function NavBar() {
     return (
@@ -37,13 +36,25 @@ function NavDesktop(props) {
                 className="nav-right inter-medium-blue-charcoal-18px"
                 data-id="I148:989;113:586"
             >
-                <Link to="/" className="nav-home-link" data-id="I148:989;113:587">
+                <Link
+                    to="/"
+                    className="nav-home-link"
+                    data-id="I148:989;113:587"
+                >
                     {navHomeLink}
                 </Link>
-                <Link to="/about" className="nav-home-link-1" data-id="I148:989;113:588">
+                <Link
+                    to="/about"
+                    className="nav-home-link-1"
+                    data-id="I148:989;113:588"
+                >
                     {navHomeLink2}
                 </Link>
-                <Link to="/contact" className="nav-home-link-2" data-id="I148:989;113:589">
+                <Link
+                    to="/contact"
+                    className="nav-home-link-2"
+                    data-id="I148:989;113:589"
+                >
                     {navHomeLink3}
                 </Link>
                 <img
