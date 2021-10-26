@@ -2,19 +2,71 @@
     font-family: Merriweather
     font-style: normal
     font-weight: bold
-    font-size: 96px
+    // font-size: 96px
+    font-size: 15vw
     line-height: 110px
     text-align: center
     color: #000C19
     margin-bottom: 48px
     width: 100%
 
+@media screen and ( min-width: 600px )
+    .heading
+        font-size: 96px
+
 .formContainer
+    margin: 0 auto
     margin-top: 20vh
+    width: 85vw
     display: flex
     justify-content: center
-    align-items: center
     flex-wrap: wrap
 
-.form
-    width: 35vw
+.left, .right
+    width: 45%
+
+.right
+    margin-top: 10px
+
+.left
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    flex-wrap: wrap
+    padding-right: 5vw
+
+.boldSubtitle
+    font-family: "Inter"
+    font-style: normal
+    font-weight: 600
+    font-size: 36px
+    line-height: 64px
+    letter-spacing: -0.4px
+    color: #001833
+
+.description
+    font-family: "Inter"
+    font-style: normal
+    font-weight: normal
+    font-size: 20px
+    line-height: 36px
+    letter-spacing: -0.4px
+    color: #001833
+
+.address, .email, .contactNumber
+    width: 100%
+    font-family: "Inter"
+    font-style: normal
+    font-weight: normal
+    font-size: 24px
+    line-height: 24px
+    letter-spacing: -0.4px
+    color: #000000
+    margin: 15px 0
+
+@media screen and ( max-width: 1200px )
+    .left
+        display: none
+
+    .right
+        width: 85vw
