@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "../components/NavBar/NavBar";
 import CustomForm from "../components/contact/customForm/CustomForm";
+import DonationForm from "../components/contact/DonationForm/DonationForm";
 import Footer from "../components/Footer/Footer";
 
 export default function ContactPage() {
@@ -15,6 +16,7 @@ export default function ContactPage() {
                 contactNumber="+1 469 931 8345"
                 heading="Contact"
             />
+            <DonationForm />
             <Footer />
         </>
     );
