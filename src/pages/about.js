@@ -4,8 +4,9 @@ import DescriptionSection from "../components/DescriptionSection/DescriptionSect
 import Footer from "../components/Footer/Footer";
 import Collection from "../components/TeamCard/Collection";
 import FadeInUp from "../animations/FadeInUp";
+import { graphql } from "gatsby";
 
-export default function AboutPage() {
+export default function AboutPage(data) {
     const teamData = [
         {
             name: "Noman Mufti",
@@ -63,33 +64,58 @@ export default function AboutPage() {
         },
     ];
 
+    console.log(data.data);
+    // const title = data.data.allWpPost.nodes[0].aboutPage.title1;
+    // const fieldGroupName =
+    //     data.data.allWpPost.nodes[0].aboutPage.fieldGroupName;
+
+    // console.log(title, fieldGroupName);
+
+    const title1 = data.data.allWpPage.nodes[0].aboutPage.title1;
+    const description1 = data.data.allWpPage.nodes[0].aboutPage.description1;
+
+    const title2 = data.data.allWpPage.nodes[0].aboutPage.title2;
+    const description2 = data.data.allWpPage.nodes[0].aboutPage.description2;
+
     return (
         <div>
             <NavBar />
-            <FadeInUp>
-                <DescriptionSection
-                    heading="What is IPP"
-                    text="Industries create jobs, economic growth and prosperity. Industries create jobs, economic growth and prosperity and much more. Industries create jobs, economic growth and prosperity. Industries create jobs, economic growth and prosperity and much more. Industries create jobs, economic growth and prosperity. Industries create jobs, economic growth and prosperity and much more. Industries create jobs, economic growth and prosperity. Industries create jobs, economic growth and prosperity and much more. Industries create jobs, economic growth and prosperity. Industries create jobs, economic growth and prosperity and much more. Industries create jobs, economic growth and prosperity. Industries create jobs, economic growth and prosperity and much more. Industries create jobs, economic growth and prosperity. Industries create jobs, economic growth and prosperity and much more."
-                />
-            </FadeInUp>
-            <FadeInUp>
-                <DescriptionSection
-                    heading="IPP Partners"
-                    text="Industries create jobs, economic growth and prosperity. Industries create jobs, economic growth and prosperity and much more. Industries create jobs, economic growth and prosperity. Industries create jobs, economic growth and prosperity and much more. Industries create jobs, economic growth and prosperity. Industries create jobs, economic growth and prosperity and much more. Industries create jobs, economic growth and prosperity. Industries create jobs, economic growth and prosperity and much more. Industries create jobs, economic growth and prosperity. Industries create jobs, economic growth and prosperity and much more. Industries create jobs, economic growth and prosperity. Industries create jobs, economic growth and prosperity and much more. Industries create jobs, economic growth and prosperity. Industries create jobs, economic growth and prosperity and much more."
-                />
-            </FadeInUp>
-            <FadeInUp>
-                <DescriptionSection
-                    heading="Entrepreneur Network"
-                    text="Industries create jobs, economic growth and prosperity. Industries create jobs, economic growth and prosperity and much more. Industries create jobs, economic growth and prosperity. Industries create jobs, economic growth and prosperity and much more. Industries create jobs, economic growth and prosperity. Industries create jobs, economic growth and prosperity and much more. Industries create jobs, economic growth and prosperity. Industries create jobs, economic growth and prosperity and much more. Industries create jobs, economic growth and prosperity. Industries create jobs, economic growth and prosperity and much more. Industries create jobs, economic growth and prosperity. Industries create jobs, economic growth and prosperity and much more. Industries create jobs, economic growth and prosperity. Industries create jobs, economic growth and prosperity and much more."
-                />
-            </FadeInUp>
+
+            {/* {data.data.allWpPage.nodes.map((e) => (
+                <FadeInUp>
+                    {console.log(e.aboutPage)}
+                    <DescriptionSection
+                        heading={e.aboutPage.title1}
+                        text={e.aboutPage.description1}
+                    />
+                </FadeInUp>
+            ))} */}
 
             <FadeInUp>
-                <Collection heading="Our Team" teamData={teamData} />
+                <DescriptionSection heading={title1} text={description1} />
             </FadeInUp>
+            <FadeInUp>
+                <DescriptionSection heading={title2} text={description2} />
+            </FadeInUp>
+
+            <Collection heading="Our Team" teamData={teamData} />
 
             <Footer />
         </div>
     );
 }
+
+export const query = graphql`
+    {
+        allWpPage {
+            nodes {
+                aboutPage {
+                    description1
+                    title1
+                    description2
+                    title2
+                }
+            }
+        }
+    }
+`;
