@@ -1,5 +1,6 @@
 import React from "react";
 import "./HowItWorks.sass";
+import FadeInUp from "../../animations/FadeInUp";
 
 function HowItWorks() {
     return (
@@ -41,114 +42,124 @@ function Component3(props) {
                 {heroTitle}
             </h1>
             <div className="cardContainer">
-                <div
-                    className="hiw-card hiw-microfinancing animate-enter1"
-                    data-id="148:933"
-                >
-                    <WWDEmpowerIcon
-                        src={wWDEmpowerIconProps.src}
-                        data-id="148:934:an-component-instance"
-                    />
+                <FadeInUp>
                     <div
-                        className="hiw inter-bold-midnight-22px"
-                        data-id="148:939"
+                        className="hiw-card hiw-microfinancing animate-enter1"
+                        data-id="148:933"
                     >
-                        {hiwMicrofinancing}
+                        <WWDEmpowerIcon
+                            src={wWDEmpowerIconProps.src}
+                            data-id="148:934:an-component-instance"
+                        />
+                        <div
+                            className="hiw inter-bold-midnight-22px"
+                            data-id="148:939"
+                        >
+                            {hiwMicrofinancing}
+                        </div>
+                        <p
+                            className="hiw-1 inter-normal-midnight-14px"
+                            data-id="148:940"
+                        >
+                            {hiwMicrofinancing2}
+                        </p>
                     </div>
-                    <p
-                        className="hiw-1 inter-normal-midnight-14px"
-                        data-id="148:940"
-                    >
-                        {hiwMicrofinancing2}
-                    </p>
-                </div>
-                <div
-                    className="hiw-card hiw-group-support animate-enter2"
-                    data-id="148:941"
-                >
-                    <WWDEmpowerIcon
-                        src={wWDEmpowerIcon2Props.src}
-                        className={wWDEmpowerIcon2Props.className}
-                        data-id="148:942:an-component-instance"
-                    />
+                </FadeInUp>
+                <FadeInUp>
                     <div
-                        className="hiw inter-bold-midnight-22px"
-                        data-id="148:949"
+                        className="hiw-card hiw-group-support animate-enter2"
+                        data-id="148:941"
                     >
-                        {hiwGroupSupport}
+                        <WWDEmpowerIcon
+                            src={wWDEmpowerIcon2Props.src}
+                            className={wWDEmpowerIcon2Props.className}
+                            data-id="148:942:an-component-instance"
+                        />
+                        <div
+                            className="hiw inter-bold-midnight-22px"
+                            data-id="148:949"
+                        >
+                            {hiwGroupSupport}
+                        </div>
+                        <p
+                            className="hiw-2 inter-normal-midnight-14px"
+                            data-id="148:950"
+                        >
+                            {hiwGroupSupport2}
+                        </p>
                     </div>
-                    <p
-                        className="hiw-2 inter-normal-midnight-14px"
-                        data-id="148:950"
-                    >
-                        {hiwGroupSupport2}
-                    </p>
-                </div>
-                <div
-                    className="hiw-card hiw-well-being animate-enter3"
-                    data-id="148:951"
-                >
-                    <HIWWellBeingIcon
-                        src={hIWWellBeingIconProps.src}
-                        data-id="148:952:an-component-instance"
-                    />
+                </FadeInUp>
+                <FadeInUp>
                     <div
-                        className="hiw inter-bold-midnight-22px"
-                        data-id="148:956"
+                        className="hiw-card hiw-well-being animate-enter3"
+                        data-id="148:951"
                     >
-                        {hiwWellBeingTit}
+                        <HIWWellBeingIcon
+                            src={hIWWellBeingIconProps.src}
+                            data-id="148:952:an-component-instance"
+                        />
+                        <div
+                            className="hiw inter-bold-midnight-22px"
+                            data-id="148:956"
+                        >
+                            {hiwWellBeingTit}
+                        </div>
+                        <p
+                            className="hiw-1 inter-normal-midnight-14px"
+                            data-id="148:957"
+                        >
+                            {hiwWellBeingCop}
+                        </p>
                     </div>
-                    <p
-                        className="hiw-1 inter-normal-midnight-14px"
-                        data-id="148:957"
-                    >
-                        {hiwWellBeingCop}
-                    </p>
-                </div>
-                <div
-                    className="hiw-card hiw-transformation animate-enter4"
-                    data-id="148:958"
-                >
-                    <WWDEmpowerIcon
-                        src={wWDEmpowerIcon3Props.src}
-                        className={wWDEmpowerIcon3Props.className}
-                        data-id="148:959:an-component-instance"
-                    />
+                </FadeInUp>
+                <FadeInUp>
                     <div
-                        className="hiw inter-bold-midnight-22px"
-                        data-id="148:965"
+                        className="hiw-card hiw-transformation animate-enter4"
+                        data-id="148:958"
                     >
-                        {hiwTransformation}
+                        <WWDEmpowerIcon
+                            src={wWDEmpowerIcon3Props.src}
+                            className={wWDEmpowerIcon3Props.className}
+                            data-id="148:959:an-component-instance"
+                        />
+                        <div
+                            className="hiw inter-bold-midnight-22px"
+                            data-id="148:965"
+                        >
+                            {hiwTransformation}
+                        </div>
+                        <p
+                            className="hiw-1 inter-normal-midnight-14px"
+                            data-id="148:966"
+                        >
+                            {hiwTransformation2}
+                        </p>
                     </div>
-                    <p
-                        className="hiw-1 inter-normal-midnight-14px"
-                        data-id="148:966"
-                    >
-                        {hiwTransformation2}
-                    </p>
-                </div>
-                <div
-                    className="hiw-card hiw-transformation-1 animate-enter5"
-                    data-id="148:967"
-                >
-                    <WWDEmpowerIcon
-                        src={wWDEmpowerIcon4Props.src}
-                        className={wWDEmpowerIcon4Props.className}
-                        data-id="148:968:an-component-instance"
-                    />
+                </FadeInUp>
+                <FadeInUp>
                     <div
-                        className="hiw inter-bold-midnight-22px"
-                        data-id="148:974"
+                        className="hiw-card hiw-transformation-1 animate-enter5"
+                        data-id="148:967"
                     >
-                        {hiwSuccessTitle}
+                        <WWDEmpowerIcon
+                            src={wWDEmpowerIcon4Props.src}
+                            className={wWDEmpowerIcon4Props.className}
+                            data-id="148:968:an-component-instance"
+                        />
+                        <div
+                            className="hiw inter-bold-midnight-22px"
+                            data-id="148:974"
+                        >
+                            {hiwSuccessTitle}
+                        </div>
+                        <p
+                            className="hiw-2 inter-normal-midnight-14px"
+                            data-id="148:975"
+                        >
+                            {hiwSuccessCopy}
+                        </p>
                     </div>
-                    <p
-                        className="hiw-2 inter-normal-midnight-14px"
-                        data-id="148:975"
-                    >
-                        {hiwSuccessCopy}
-                    </p>
-                </div>
+                </FadeInUp>
             </div>
         </div>
     );

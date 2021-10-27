@@ -49,7 +49,6 @@ export default function HeroSection(props) {
                                 <img
                                     className="image-slider animate-enter heroImage"
                                     src={e.image}
-                                    // style={{ backgroundImage: `url("${e.image}")` }}
                                 />
                             </div>
                             <div className="heroSectionContainer">
@@ -62,21 +61,6 @@ export default function HeroSection(props) {
                             </div>
                         </>
                     ))}
-
-                    {/* <div
-                        className="image-slider animate-enter"
-                        src={imageSlider}
-                    >
-                        <div className="heroSectionContainer">
-                            <h1 className="hero-title merriweather-bold-soapstone-136px">
-                                {heroTitle}
-                            </h1>
-                            <div className="controls">
-                                <HeroCTA>{heroCTAProps.children}</HeroCTA>
-                                <HeroSliderPage />
-                            </div>
-                        </div>
-                    </div> */}
                 </Slider>
             </div>
         </div>

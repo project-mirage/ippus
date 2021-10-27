@@ -90,6 +90,7 @@ function NavDesktop(props) {
                         <Link to="/">Home</Link>
                         <Link to="/about">About</Link>
                         <Link to="/contact">Contact</Link>
+                        <Link to="/competition">Competition</Link>
                         <HeroCTA
                             style={{ marginTop: "20px", marginBottom: "20px" }}
                         >

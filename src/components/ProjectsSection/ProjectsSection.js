@@ -2,16 +2,19 @@ import React from "react";
 import ProjectCard from "../ProjectsCard/ProjectsCard";
 import "./ProjectsSelection.sass";
 import Image from "./op-mbfm-rectangle.png";
+import FadeInUp from "../../animations/FadeInUp";
 
 export default function App() {
     return (
         <div className="wwd-section">
-            <h1
-                className="hero-title-1 merriweather-bold-darkblue-136px"
-                data-id="148:879"
-            >
-                Our Projects
-            </h1>
+            <FadeInUp>
+                <h1
+                    className="hero-title-1 merriweather-bold-darkblue-136px"
+                    data-id="148:879"
+                >
+                    Our Projects
+                </h1>
+            </FadeInUp>
             <div className="project-details">
                 <ProjectCard
                     opMbfmTitle="Melt Blown Fabric Manufacturing"
