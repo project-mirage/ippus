@@ -51,7 +51,7 @@ export default function IndexPage() {
     ];
 
     return (
-        <div style={{ overflowX: "hidden" }}>
+        <div style={{ overflow: "hidden" }}>
             <NavBar />
             <HeroSection sliderData={sliderData} />
             <FadeInUp>
