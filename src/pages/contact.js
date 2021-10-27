@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "../components/NavBar/NavBar";
 import CustomForm from "../components/contact/customForm/CustomForm";
+import DonationForm from "../components/contact/DonationForm/DonationForm";
 import Footer from "../components/Footer/Footer";
 import FadeInUp from "../animations/FadeInUp";
 
