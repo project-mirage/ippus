@@ -1,279 +1,71 @@
-.heading
-    margin: 80px auto
-    text-align: center
-    font-family: Merriweather
-    font-size: 96px
-    text-align: center
-    color: #000C19
-.formDiv
-    margin: 0 auto
-    max-width: 858px
-    background-color: #ffffff
-    height: 71.2vh
-.formHeading
-    font-family: Poppins
+.formContainer
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 70vw
+    margin: 10vh auto
+    flex-wrap: wrap
+
+.donationType
+    font-family: "Inter"
+    font-style: normal
     font-weight: 500
     font-size: 24px
+    line-height: 50px
     color: #0077FF
-    margin: 16px 0px
-.switchButtons
-    display: flex
-    align-items: center
-    margin-bottom: 50px
-    max-width: 858px
-    height: 6.39vh
-    background: #3392FF
-    border-radius: 8px
-.whitebg
+    width: 100%
+    padding-left: 10px
+
+.inputsContainer
     display: flex
     align-items: center
     justify-content: center
-    margin-left: 2px
-    width: 426px
-    height: 5.9vh
-    background: #FFFFFF
-    border-radius: 8px
+    flex-wrap: wrap
+    width: 100%
 
-    font-family: Poppins
-    font-weight: 500
-    font-size: 20px
-    text-align: center
-    color: #000C19
-.bluebg
+.donationInput
+    width: 45%
+    margin: 0 20px
+
+.switcher
     display: flex
     align-items: center
     justify-content: center
-    margin-left: 1px
-    width: 426px
-    height: 5.9vh
-    background: #3392FF
-    border-radius: 8px
+    flex-wrap: wrap
+    margin: 50px 0
 
-    font-family: Poppins
-    font-weight: 500
-    font-size: 20px
-    text-align: center
-    color: #ffffff
-
-.topCell
-    display: flex
-    justify-content: space-between
-    background-color: #ffffff
-    width: 858px
-    height: 11.2vh
-    margin-bottom: 4.72vh
-.cell1
-    width: 420px
-    height: 11.2vh
-    background-color: #ffffff
-.cell2
-    width: 420px
-    height: 11.2vh
-    background-color: #ffffff
-.cell3
-    width: 420px
-    height: 11.2vh
-    background-color: #ffffff
-.cell4
-    width: 420px
-    height: 11.2vh
-    background-color: #ffffff
-.cellHeading
-    font-family: Poppins
+.switcherButton
+    font-family: "Inter"
     font-style: normal
-    font-weight: 600
-    font-size: 16px
-    color: #020303
-    margin-bottom: 0.67vh
-.cellSubHeading
-    font-family: Poppins
-    font-size: 14px
-    color: #777F88
-    margin-bottom: 2vh
-.ammount
-    font-family: Poppins
+    font-weight: 500
     font-size: 20px
-    letter-spacing: -0.4px
-    color: #3C4858
-    margin-bottom: 1.34vh
-.underline
-    height: 1px
-    max-width: 420px
-    background: #1F2D3D
-
-.bottomCell
-    display: flex
-    justify-content: space-between
-    background-color: #ffffff
-    width: 858px
-    height: 11.2vh
-    margin-bottom: 12.8vh
-.confirmButton
-    display: flex
-    align-items: center
-    justify-content: center
-    width: 208px
-    height: 80px
+    line-height: 24px
+    text-align: center
+    color: #FAFCFF
     background: #3392FF
-    border-radius: 6px
-    margin: 0 auto
-    h2
-        font-family: Poppins
-        font-style: normal
-        font-weight: 500
-        font-size: 20px
-        line-height: 24px
-        color: #FFFFFF
-        text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.04)
+    width: 25vw
+    padding: 10px
+    margin-bottom: 15px
+    border-radius: 8px
+    margin-left: 10px
+    margin-right: 10px
 
-@media screen and ( max-width: 390px )
-    .heading
-        font-size: 48px
-    .switchButtons
-        margin: 36px auto
-        width: 340px
-        height: 6.5vh
-    .topCell
-        background-color: #ffa6a6
-        height: 26.4vh
-        flex-direction: column
-        margin-bottom: 4.9vh
-    .bottomCell
-        background-color: #ff0101
-        height: 26.4vh
-        flex-direction: column
-        margin-bottom: 1.3vh
-    .cell1
-        width: 340px
-        background-color: #33ff2f
-        margin-bottom: 4.9vh
-    .cell2
-        width: 340px
-        background-color: #33ff2f
-        margin-bottom: 4.9vh
-    .cell3
-        width: 340px
-        background-color: #33ff2f
-        margin-bottom: 4.9vh
-    .cell4
-        width: 340px
-        background-color: #33ff2f
-        margin-bottom: 4.9vh
-    .underline
-        width: 340px
-@media screen and ( max-width: 1000px )
-    .switchButtons
-        margin: 36px auto
-        margin-bottom: 70px
-        width: 850px
-    .cell1
-        width: 400px
-    .cell2
-        width: 400px
-    .cell3
-        width: 400px
-    .cell4
-        width: 400px
-    .underline
-        width: 400px
-    .bottomCell
-        margin-bottom: 50px
-@media screen and ( max-width: 890px )
-    .heading
-        font-size: 70px
-    .switchButtons
-        margin: 36px auto
-        margin-bottom: 70px
-        width: 700px
-    .topCell
-        margin: 0 auto
-        width: 700px
-    .bottomCell
-        margin: 0 auto
-        width: 700px
-    .cell1
-        width: 300px
-    .cell
-        width: 300px
-    .cell3
-        width: 300px
-    .cell4
-        width: 300px
-    .underline
-        width: 300px
-@media screen and ( max-width: 890px )
-    .switchButtons
-        margin: 36px auto
-        margin-bottom: 70px
-        width: 580px
-    .topCell
-        margin: 0 auto
-        width: 580px
-    .bottomCell
-        margin: 0 auto
-        width: 580px
-    .cell1
-        width: 250px
-    .cell
-        width: 250px
-    .cell3
-        width: 250px
-    .cell4
-        width: 250px
-    .underline
-        width: 250px
-    @media screen and ( max-width: 600px )
-    .heading
-        font-size: 58px
-    .switchButtons
-        margin: 36px auto
-        width: 500px
-        height: 6.5vh
-        margin-bottom: 5vh
-    .topCell
-        align-items: center
-        height: 20vh
-        flex-direction: column
-        margin-bottom: 4.9vh
-    .bottomCell
-        align-items: center
-        height: 20vh
-        flex-direction: column
-        margin-bottom: 5vh
-    .cell1
-        width: 500px
-        margin-bottom: 4.9vh
-    .cell2
-        width: 500px
-        margin-bottom: 4.9vh
-    .cell3
-        width: 500px
-        margin-bottom: 4.9vh
-    .cell4
-        width: 500px
-        margin-bottom: 4.9vh
-    .underline
-        width: 500px
-@media screen and ( max-width: 890px )
-    .switchButtons
-        margin: 36px auto
-        margin-bottom: 70px
-        width: 580px
-    .topCell
-        margin: 0 auto
-        width: 580px
-    .bottomCell
-        margin: 0 auto
-        width: 580px
-    .cell1
-        width: 250px
-    .cell
-        width: 250px
-    .cell3
-        width: 250px
-    .cell4
-        width: 250px
-    .underline
-        width: 250px
+.active
+    background: #FFFFFF
+    color: #000C19
+    transform: scaleY(0.9)
+    border: 2px solid #3392FF
+    border-radius: 8px
 
-    
+@media screen and ( max-width: 1200px )
+    .formContainer
+        width: 85vw
+
+    .donationInput
+        width: 100%
+
+    .switcher
+        margin: 20px 0
+
+    .switcherButton
+        width: 35vw

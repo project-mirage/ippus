@@ -2,9 +2,15 @@ import React from "react";
 import * as css from "./FormInput.module.sass";
 import TextareaAutosize from "react-autosize-textarea";
 
-export default function FormInput({ heading, subheading, type, onChange }) {
+export default function FormInput({
+    heading,
+    subheading,
+    type,
+    onChange,
+    containerClassname,
+}) {
     return (
-        <>
+        <div className={containerClassname}>
             <h6 className={css.heading}>{heading}</h6>
             <p className={css.subheading}>{subheading}</p>
             <TextareaAutosize
@@ -16,6 +22,6 @@ export default function FormInput({ heading, subheading, type, onChange }) {
                 id={heading}
                 className={css.input}
             />
-        </>
+        </div>
     );
 }

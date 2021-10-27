@@ -1,59 +1,66 @@
-import React from "react";
+import React, { useState } from "react";
+import FormInput from "../customForm/FormInput";
 import * as css from "./DonationForm.module.sass";
+import HeroCTA from "../../HeroCTA/HeroCTA";
 
-export default function DonationForm({ heading, boldSubtitle }) {
+export default function DonationForm() {
+    const [selectedButton, setselectedButton] = useState(0);
+
     return (
         <div className={css.formContainer}>
-            <h1 className={css.heading}>Donate Now</h1>
-            <div className={css.formDiv}>
-                <h3 className={css.formHeading}>Donation Type</h3>
-                <div className={css.switchButtons}>
-                    <div className={css.whitebg}>One-Time</div>
-                    <div className={css.bluebg}>Monthly</div>
+            <h4 className={css.donationType}>Select Donation Type</h4>
+
+            <div className={css.switcher}>
+                <div
+                    onClick={() => {
+                        setselectedButton(0);
+                    }}
+                    // only add the css.active class if selected button is the cooresponding one
+                    className={`${css.switcherButton} ${
+                        selectedButton === 0 && css.active
+                    } `}
+                >
+                    One - Time
                 </div>
-                <div className={css.cellContainer}>
-                    <div className={css.topCell}>
-                        <div className={css.cell1}>
-                            <h3 className={css.cellHeading}>Donation Amount</h3>
-                            <h3 className={css.cellSubHeading}>
-                                Enter amount in PKR
-                            </h3>
-                            <h3 className={css.ammount}>5000</h3>
-                            <div className={css.underline}></div>
-                        </div>
-                        <div className={css.cell3}>
-                            {" "}
-                            <h3 className={css.cellHeading}>Full Name</h3>
-                            <h3 className={css.cellSubHeading}>
-                                Enter your full name
-                            </h3>
-                            <h3 className={css.ammount}>Nomaan Mufti</h3>
-                            <div className={css.underline}></div>
-                        </div>
-                    </div>
-                    <div className={css.bottomCell}>
-                        <div className={css.cell2}>
-                            {" "}
-                            <h3 className={css.cellHeading}>Contact Number</h3>
-                            <h3 className={css.cellSubHeading}>
-                                Enter valid contact number
-                            </h3>
-                            <h3 className={css.ammount}>+92 123 4567890</h3>
-                            <div className={css.underline}></div>
-                        </div>
-                        <div className={css.cell4}>
-                            <h3 className={css.cellHeading}>Email</h3>
-                            <h3 className={css.cellSubHeading}>
-                                Enter valid email address
-                            </h3>
-                            <h3 className={css.ammount}>yourname@email.com</h3>
-                            <div className={css.underline}></div>
-                        </div>
-                    </div>
+                <div
+                    onClick={() => {
+                        setselectedButton(1);
+                    }}
+                    // only add the css.active class if selected button is the cooresponding one
+                    className={`${css.switcherButton} ${
+                        selectedButton === 1 && css.active
+                    }`}
+                >
+                    Monthly
                 </div>
-                <div className={css.confirmButton}>
-                    <h2 className={css.text}>Confirm & Send</h2>
-                </div>
+            </div>
+
+            <div className={css.inputsContainer}>
+                <FormInput
+                    heading="Donation Amount"
+                    subheading="Enter amount in PKR"
+                    type="number"
+                    containerClassname={css.donationInput}
+                />
+                <FormInput
+                    heading="Full Name"
+                    subheading="Enter your full name"
+                    type="text"
+                    containerClassname={css.donationInput}
+                />
+                <FormInput
+                    heading="Contact Number"
+                    subheading="Enter Valid contact number"
+                    type="text"
+                    containerClassname={css.donationInput}
+                />
+                <FormInput
+                    heading="Email"
+                    subheading="Enter valid email address"
+                    type="email"
+                    containerClassname={css.donationInput}
+                />
+                <HeroCTA>Submit Form</HeroCTA>
             </div>
         </div>
     );

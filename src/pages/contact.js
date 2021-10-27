@@ -19,6 +19,7 @@ export default function ContactPage() {
                     heading="Contact"
                 />
             </FadeInUp>
+            <DonationForm />
             <Footer />
         </>
     );
