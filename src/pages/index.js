@@ -8,66 +8,102 @@ import WhoWeAre from "../components/WhoWeAre/WhoWeAre";
 import Cards from "../components/Cards/Cards";
 import Footer from "../components/Footer/Footer";
 import FadeInUp from "../animations/FadeInUp";
+import { graphql } from "gatsby";
 
-import image2 from "../images/Image2.webp";
-import image3 from "../images/Image3.webp";
-import image4 from "../images/Image4.webp";
-import image5 from "../images/Image5.webp";
-import image6 from "../images/Image6.webp";
-import image7 from "../images/Image7.webp";
+export default function IndexPage(data) {
+    console.log(data);
+    let sliderData;
+    let whatWeDo;
+    let ourProjects;
+    let howItWorksData;
+    let whoWeAreData;
+    let callToActionSectionData;
 
-export default function IndexPage() {
-    const sliderData = [
-        {
-            image: image2,
-            heroTitle: "Let's Empower People 1",
-            CTAText: "How We Do It 1",
-        },
-        {
-            image: image3,
-            heroTitle: "Let's Empower People 2",
-            CTAText: "How We Do It 2",
-        },
-        {
-            image: image4,
-            heroTitle: "Let's Empower People 3",
-            CTAText: "How We Do It 3",
-        },
-        {
-            image: image5,
-            heroTitle: "Let's Empower People 4",
-            CTAText: "How We Do It 4",
-        },
-        {
-            image: image6,
-            heroTitle: "Let's Empower People 5",
-            CTAText: "How We Do It 5",
-        },
-        {
-            image: image7,
-            heroTitle: "Let's Empower People 6",
-            CTAText: "How We Do It 6",
-        },
-    ];
+    // deals with the rare case that the nodes array has first or second element null
+    for (let i = 0; i < data.data.allWpPage.nodes.length; i++) {
+        const e = data.data.allWpPage.nodes[i];
+
+        if (e.landingPage.heroSectionSlide) {
+            sliderData = e.landingPage.heroSectionSlide;
+        }
+        if (e.landingPage.ourProjects) {
+            ourProjects = e.landingPage.ourProjects;
+        }
+        if (e.landingPage.whatWeDo) {
+            whatWeDo = e.landingPage.whatWeDo;
+        }
+        if (e.landingPage.howItWorks) {
+            howItWorksData = e.landingPage.howItWorks;
+        }
+        if (e.landingPage.whoWeAre) {
+            whoWeAreData = e.landingPage.whoWeAre[0];
+        }
+        if (e.landingPage.callToActionSection) {
+            callToActionSectionData = e.landingPage.callToActionSection;
+        }
+    }
 
     return (
         <div style={{ overflow: "hidden" }}>
             <NavBar />
             <HeroSection sliderData={sliderData} />
             <FadeInUp>
-                <WhatWeDoSection />
+                <WhatWeDoSection whatWeDoData={whatWeDo} />
             </FadeInUp>
-            <ProjectsSection />
+            <ProjectsSection projectsData={ourProjects} />
             <FadeInUp>
-                <HowItWorks />
-            </FadeInUp>
-            <FadeInUp>
-                <WhoWeAre />
+                <HowItWorks howItWorksData={howItWorksData} />
             </FadeInUp>
             <FadeInUp>
-                <Cards />
+                <WhoWeAre whoWeAreData={whoWeAreData} />
+            </FadeInUp>
+            <FadeInUp>
+                <Cards callToActionSectionData={callToActionSectionData} />
             </FadeInUp>
             <Footer />
         </div>
     );
 }
+
+export const query = graphql`
+    {
+        allWpPage {
+            nodes {
+                landingPage {
+                    heroSectionSlide {
+                        title
+                        cta
+                        image {
+                            sourceUrl
+                        }
+                    }
+                    whatWeDo {
+                        title
+                        description
+                    }
+                    ourProjects {
+                        projectName
+                        projectDescription
+                        projectImage {
+                            sourceUrl
+                        }
+                    }
+                    howItWorks {
+                        benefitTitle
+                        benefitDescription
+                    }
+                    whoWeAre {
+                        title
+                        subTitle
+                        cta
+                    }
+                    callToActionSection {
+                        blockHeading
+                        blockText
+                        blockEmail
+                    }
+                }
+            }
+        }
+    }
+`;

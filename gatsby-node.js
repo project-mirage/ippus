@@ -4,9 +4,54 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             allWpPage {
                 nodes {
                     aboutPage {
-                        description1
-                        fieldGroupName
-                        title1
+                        contentSection {
+                            aboutTitle
+                            aboutDescription
+                        }
+                        ourTeam {
+                            memberName
+                            memberRole
+                            facebook
+                            whatsapp
+                            linkedin
+                            memberImage {
+                                sourceUrl
+                            }
+                        }
+                    }
+                    landingPage {
+                        heroSectionSlide {
+                            title
+                            cta
+                            image {
+                                sourceUrl
+                            }
+                        }
+                        whatWeDo {
+                            title
+                            description
+                        }
+                        ourProjects {
+                            projectName
+                            projectDescription
+                            projectImage {
+                                sourceUrl
+                            }
+                        }
+                        howItWorks {
+                            benefitTitle
+                            benefitDescription
+                        }
+                        whoWeAre {
+                            title
+                            subTitle
+                            cta
+                        }
+                        callToActionSection {
+                            blockHeading
+                            blockText
+                            blockEmail
+                        }
                     }
                 }
             }
@@ -17,17 +62,17 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         reporter.error("There was an error fetching posts", result.errors);
     }
 
-    console.error(result.data);
+    // console.error(result.data);
 
-    // Define the template to use
+    // // Define the template to use
     // const template = require.resolve(`./src/pages/about.js`);
 
-    // if (result.data.allWpPost.nodes.length) {
-    //     result.data.allWpPost.nodes.map((post) => {
+    // if (result.data.allWpPage.nodes.length) {
+    //     result.data.allWpPage.nodes.map((page) => {
     //         actions.createPage({
     //             path: "/about",
     //             component: template,
-    //             context: post,
+    //             context: page,
     //         });
     //     });
     // }

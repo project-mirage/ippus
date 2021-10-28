@@ -1,5 +1,4 @@
 import React from "react";
-import instaLogo from "../../images/instaLogo.png";
 import fbLogo from "../../images/fbLogo.png";
 import twitLogo from "../../images/twitLogo.png";
 import waLogo from "../../images/waLogo.svg";
@@ -9,7 +8,6 @@ export default function DescriptionSection({
     name,
     role,
     image,
-    instaLink,
     twitLink,
     fbLink,
     waLink,
@@ -17,14 +15,11 @@ export default function DescriptionSection({
     return (
         <div className={css.card}>
             <div className={css.circle}>
-                <img className={css.image} src={image} alt="" />
+                {image && <img className={css.image} src={image} alt="" />}
             </div>
             <h1 className={css.name}>{name}</h1>
             <p className={css.role}>{role}</p>
             <div className={css.socials}>
-                <a href={instaLink}>
-                    <img src={instaLogo} alt="instagram logo" />
-                </a>
                 <a href={fbLink}>
                     <img src={fbLogo} alt="facebook logo" />
                 </a>

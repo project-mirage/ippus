@@ -11,13 +11,12 @@ export default function Collection({ heading, teamData }) {
             {teamData.map((e) => (
                 <FadeInUp>
                     <TeamCard
-                        name={e.name}
-                        role={e.role}
-                        image={e.image}
-                        instaLink={e.instaLink}
-                        waLink={e.waLink}
-                        twitLink={e.twitLink}
-                        fbLink={e.fbLink}
+                        name={e.memberName}
+                        role={e.memberRole}
+                        image={e.memberImage ? e.memberImage.sourceUrl : ""}
+                        waLink={e.whatsapp}
+                        twitLink={e.linkedin}
+                        fbLink={e.facebook}
                     />
                 </FadeInUp>
             ))}

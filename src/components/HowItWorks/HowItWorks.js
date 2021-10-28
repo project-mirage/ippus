@@ -1,236 +1,167 @@
 import React from "react";
-import "./HowItWorks.sass";
+import * as css from "./HowItWorks.module.sass";
+import HowItWorksCard from "./HowItWorksCard";
 import FadeInUp from "../../animations/FadeInUp";
 
-function HowItWorks() {
-    return (
-        <Component3
-            {...component3Data}
-            data-id="189:1243:an-component-instance"
-        />
-    );
-}
-
-export default HowItWorks;
-
-function Component3(props) {
-    const {
-        heroTitle,
-        hiwMicrofinancing,
-        hiwMicrofinancing2,
-        hiwGroupSupport,
-        hiwGroupSupport2,
-        hiwWellBeingTit,
-        hiwWellBeingCop,
-        hiwTransformation,
-        hiwTransformation2,
-        hiwSuccessTitle,
-        hiwSuccessCopy,
-        wWDEmpowerIconProps,
-        wWDEmpowerIcon2Props,
-        hIWWellBeingIconProps,
-        wWDEmpowerIcon3Props,
-        wWDEmpowerIcon4Props,
-    } = props;
-
-    return (
-        <div className="component-3" data-id="189:1243">
-            <h1
-                className="hero-title-1 merriweather-bold-darkblue-136px"
-                data-id="148:880"
-            >
-                {heroTitle}
-            </h1>
-            <div className="cardContainer">
-                <FadeInUp>
-                    <div
-                        className="hiw-card hiw-microfinancing animate-enter1"
-                        data-id="148:933"
-                    >
-                        <WWDEmpowerIcon
-                            src={wWDEmpowerIconProps.src}
-                            data-id="148:934:an-component-instance"
-                        />
-                        <div
-                            className="hiw inter-bold-midnight-22px"
-                            data-id="148:939"
-                        >
-                            {hiwMicrofinancing}
-                        </div>
-                        <p
-                            className="hiw-1 inter-normal-midnight-14px"
-                            data-id="148:940"
-                        >
-                            {hiwMicrofinancing2}
-                        </p>
-                    </div>
-                </FadeInUp>
-                <FadeInUp>
-                    <div
-                        className="hiw-card hiw-group-support animate-enter2"
-                        data-id="148:941"
-                    >
-                        <WWDEmpowerIcon
-                            src={wWDEmpowerIcon2Props.src}
-                            className={wWDEmpowerIcon2Props.className}
-                            data-id="148:942:an-component-instance"
-                        />
-                        <div
-                            className="hiw inter-bold-midnight-22px"
-                            data-id="148:949"
-                        >
-                            {hiwGroupSupport}
-                        </div>
-                        <p
-                            className="hiw-2 inter-normal-midnight-14px"
-                            data-id="148:950"
-                        >
-                            {hiwGroupSupport2}
-                        </p>
-                    </div>
-                </FadeInUp>
-                <FadeInUp>
-                    <div
-                        className="hiw-card hiw-well-being animate-enter3"
-                        data-id="148:951"
-                    >
-                        <HIWWellBeingIcon
-                            src={hIWWellBeingIconProps.src}
-                            data-id="148:952:an-component-instance"
-                        />
-                        <div
-                            className="hiw inter-bold-midnight-22px"
-                            data-id="148:956"
-                        >
-                            {hiwWellBeingTit}
-                        </div>
-                        <p
-                            className="hiw-1 inter-normal-midnight-14px"
-                            data-id="148:957"
-                        >
-                            {hiwWellBeingCop}
-                        </p>
-                    </div>
-                </FadeInUp>
-                <FadeInUp>
-                    <div
-                        className="hiw-card hiw-transformation animate-enter4"
-                        data-id="148:958"
-                    >
-                        <WWDEmpowerIcon
-                            src={wWDEmpowerIcon3Props.src}
-                            className={wWDEmpowerIcon3Props.className}
-                            data-id="148:959:an-component-instance"
-                        />
-                        <div
-                            className="hiw inter-bold-midnight-22px"
-                            data-id="148:965"
-                        >
-                            {hiwTransformation}
-                        </div>
-                        <p
-                            className="hiw-1 inter-normal-midnight-14px"
-                            data-id="148:966"
-                        >
-                            {hiwTransformation2}
-                        </p>
-                    </div>
-                </FadeInUp>
-                <FadeInUp>
-                    <div
-                        className="hiw-card hiw-transformation-1 animate-enter5"
-                        data-id="148:967"
-                    >
-                        <WWDEmpowerIcon
-                            src={wWDEmpowerIcon4Props.src}
-                            className={wWDEmpowerIcon4Props.className}
-                            data-id="148:968:an-component-instance"
-                        />
-                        <div
-                            className="hiw inter-bold-midnight-22px"
-                            data-id="148:974"
-                        >
-                            {hiwSuccessTitle}
-                        </div>
-                        <p
-                            className="hiw-2 inter-normal-midnight-14px"
-                            data-id="148:975"
-                        >
-                            {hiwSuccessCopy}
-                        </p>
-                    </div>
-                </FadeInUp>
-            </div>
-        </div>
-    );
-}
-
-function WWDEmpowerIcon(props) {
-    const { src, className } = props;
-
-    return (
-        <div
-            className={`hiw-microfinancing-icon ${className || ""}`}
-            data-id="148:934"
+export default function HowItWorksCollection({ howItWorksData }) {
+    const people = (
+        <svg
+            width="48"
+            height="48"
+            viewBox="0 0 48 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
         >
-            <img className="hiw-dollar-sign" data-id="148:936" src={src} />
-        </div>
+            <path
+                d="M34 42V38C34 35.8783 33.1571 33.8434 31.6569 32.3431C30.1566 30.8429 28.1217 30 26 30H10C7.87827 30 5.84344 30.8429 4.34315 32.3431C2.84285 33.8434 2 35.8783 2 38V42"
+                stroke="#002652"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+            <path
+                d="M18 22C22.4183 22 26 18.4183 26 14C26 9.58172 22.4183 6 18 6C13.5817 6 10 9.58172 10 14C10 18.4183 13.5817 22 18 22Z"
+                stroke="#002652"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+            <path
+                d="M46 42V38C45.9987 36.2275 45.4087 34.5056 44.3227 33.1046C43.2368 31.7037 41.7163 30.7031 40 30.26"
+                stroke="#002652"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+            <path
+                d="M32 6.26001C33.7208 6.70061 35.2461 7.70141 36.3353 9.10463C37.4245 10.5078 38.0157 12.2337 38.0157 14.01C38.0157 15.7864 37.4245 17.5122 36.3353 18.9154C35.2461 20.3186 33.7208 21.3194 32 21.76"
+                stroke="#002652"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+        </svg>
     );
-}
+    const heart = (
+        <svg
+            width="48"
+            height="48"
+            viewBox="0 0 48 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M41.6802 9.21999C40.6587 8.198 39.4459 7.38728 38.1109 6.83416C36.776 6.28103 35.3452 5.99634 33.9002 5.99634C32.4553 5.99634 31.0244 6.28103 29.6895 6.83416C28.3546 7.38728 27.1417 8.198 26.1202 9.21999L24.0002 11.34L21.8802 9.21999C19.8169 7.1566 17.0183 5.99741 14.1002 5.99741C11.1822 5.99741 8.38362 7.1566 6.32024 9.21999C4.25685 11.2834 3.09766 14.0819 3.09766 17C3.09766 19.9181 4.25685 22.7166 6.32024 24.78L8.44024 26.9L24.0002 42.46L39.5602 26.9L41.6802 24.78C42.7022 23.7585 43.5129 22.5456 44.0661 21.2107C44.6192 19.8758 44.9039 18.445 44.9039 17C44.9039 15.555 44.6192 14.1242 44.0661 12.7893C43.5129 11.4544 42.7022 10.2415 41.6802 9.21999V9.21999Z"
+                stroke="#002652"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+        </svg>
+    );
+    const globe = (
+        <svg
+            width="48"
+            height="48"
+            viewBox="0 0 48 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z"
+                stroke="#002652"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+            <path
+                d="M4 24H44"
+                stroke="#002652"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+            <path
+                d="M24 4C29.0026 9.47671 31.8455 16.5841 32 24C31.8455 31.4159 29.0026 38.5233 24 44C18.9974 38.5233 16.1545 31.4159 16 24C16.1545 16.5841 18.9974 9.47671 24 4Z"
+                stroke="#002652"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+        </svg>
+    );
+    const signals = (
+        <svg
+            width="48"
+            height="48"
+            viewBox="0 0 48 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M24 40V20"
+                stroke="#002652"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+            <path
+                d="M36 40V8"
+                stroke="#002652"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+            <path
+                d="M12 40V32"
+                stroke="#002652"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+        </svg>
+    );
+    const dollar = (
+        <svg
+            width="48"
+            height="48"
+            viewBox="0 0 48 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M24 2V46"
+                stroke="#002652"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+            <path
+                d="M34 10H19C17.1435 10 15.363 10.7375 14.0503 12.0503C12.7375 13.363 12 15.1435 12 17C12 18.8565 12.7375 20.637 14.0503 21.9497C15.363 23.2625 17.1435 24 19 24H29C30.8565 24 32.637 24.7375 33.9497 26.0503C35.2625 27.363 36 29.1435 36 31C36 32.8565 35.2625 34.637 33.9497 35.9498C32.637 37.2625 30.8565 38 29 38H12"
+                stroke="#002652"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+        </svg>
+    );
 
-function HIWWellBeingIcon(props) {
-    const { src } = props;
+    const icons = [dollar, people, heart, globe, signals];
 
     return (
-        <div className="hiw-well-being-icon" data-id="148:952">
-            <img className="heart-1" data-id="148:954" src={src} />
-        </div>
+        <>
+            <FadeInUp>
+                <h1 className={css.heading}>How it works</h1>
+            </FadeInUp>
+            <div className={css.container}>
+                {howItWorksData.map((e, i) => (
+                    <HowItWorksCard
+                        img={icons[i]}
+                        title={e.benefitTitle}
+                        description={e.benefitDescription}
+                    />
+                ))}
+            </div>
+        </>
     );
 }
-
-const wWDEmpowerIconData = {
-    src: "https://anima-uploads.s3.amazonaws.com/projects/6161355fdb61f69a919554e4/releases/61617efe1392dcf49bb8de0f/img/hiw---dollar-sign@2x.png",
-};
-
-const wWDEmpowerIcon2Data = {
-    src: "https://anima-uploads.s3.amazonaws.com/projects/6161355fdb61f69a919554e4/releases/61617efe1392dcf49bb8de0f/img/users-1@2x.png",
-    className: "hiw-3-1",
-};
-
-const hIWWellBeingIconData = {
-    src: "https://anima-uploads.s3.amazonaws.com/projects/6161355fdb61f69a919554e4/releases/61617efe1392dcf49bb8de0f/img/heart-1@2x.png",
-};
-
-const wWDEmpowerIcon3Data = {
-    src: "https://anima-uploads.s3.amazonaws.com/projects/6161355fdb61f69a919554e4/releases/61617efe1392dcf49bb8de0f/img/globe-1@2x.png",
-    className: "hiw-3-2",
-};
-
-const wWDEmpowerIcon4Data = {
-    src: "https://anima-uploads.s3.amazonaws.com/projects/6161355fdb61f69a919554e4/releases/61617efe1392dcf49bb8de0f/img/bar-chart-1@2x.png",
-    className: "hiw-3",
-};
-
-const component3Data = {
-    heroTitle: "How It Works",
-    hiwMicrofinancing: "Financing",
-    hiwMicrofinancing2:
-        "Grassroots microfinancing organizations offer training, support, and reliable saving, borrowing ...",
-    hiwGroupSupport: "Group Support",
-    hiwGroupSupport2:
-        "Small groups train together and support each other in planning their income projects ...",
-    hiwWellBeingTit: "Well-Being",
-    hiwWellBeingCop:
-        "When the loan is repaid (or the living animal loan is retired by passing on an offspring), the income project ...",
-    hiwTransformation: "Transformation",
-    hiwTransformation2:
-        "People who have struggled have transformed themselves into donors and leaders, helping their neighbors ...",
-    hiwSuccessTitle: "Success",
-    hiwSuccessCopy:
-        "IPP’s partners strive to get people on the ladder to climb out of extreme poverty. IPP’s role is to ...",
-    wWDEmpowerIconProps: wWDEmpowerIconData,
-    wWDEmpowerIcon2Props: wWDEmpowerIcon2Data,
-    hIWWellBeingIconProps: hIWWellBeingIconData,
-    wWDEmpowerIcon3Props: wWDEmpowerIcon3Data,
-    wWDEmpowerIcon4Props: wWDEmpowerIcon4Data,
-};

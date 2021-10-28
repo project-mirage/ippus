@@ -1,15 +1,15 @@
 import React from "react";
 import "./Cards.sass";
 
-function Cards() {
+function Cards({ callToActionSectionData }) {
     return (
         <Component5
-            makeADonationTitl="Get in Contact"
-            makeADonationCopy="Want to say hello? Want to know more about our vision and goals? Shoot us a message!"
-            makeADonationCopy2="hello@ippus.org"
-            makeADonationTitl2="Donate Today"
-            makeADonationCopy3="Play a role in upbringing the youth and aiding them with opportunities to build a new Pakistan"
-            makeADonationCopy4="donate@ippus.org"
+            makeADonationTitl={callToActionSectionData[0].blockHeading}
+            makeADonationCopy={callToActionSectionData[0].blockText}
+            makeADonationCopy2={callToActionSectionData[0].blockEmail}
+            makeADonationTitl2={callToActionSectionData[1].blockHeading}
+            makeADonationCopy3={callToActionSectionData[1].blockText}
+            makeADonationCopy4={callToActionSectionData[1].blockEmail}
             data-id="189:1248:an-component-instance"
         />
     );

@@ -48,15 +48,15 @@ export default function HeroSection(props) {
                             <div className="colorBg">
                                 <img
                                     className="image-slider animate-enter heroImage"
-                                    src={e.image}
+                                    src={e.image.sourceUrl}
                                 />
                             </div>
                             <div className="heroSectionContainer">
                                 <h1 className="hero-title merriweather-bold-soapstone-136px">
-                                    {e.heroTitle}
+                                    {e.title}
                                 </h1>
                                 <div className="controls">
-                                    <HeroCTA>{e.CTAText}</HeroCTA>
+                                    <HeroCTA>{e.cta}</HeroCTA>
                                 </div>
                             </div>
                         </>

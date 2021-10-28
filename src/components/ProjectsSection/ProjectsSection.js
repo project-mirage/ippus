@@ -1,10 +1,9 @@
 import React from "react";
 import ProjectCard from "../ProjectsCard/ProjectsCard";
 import "./ProjectsSelection.sass";
-import Image from "./op-mbfm-rectangle.png";
 import FadeInUp from "../../animations/FadeInUp";
 
-export default function App() {
+export default function App({ projectsData }) {
     return (
         <div className="wwd-section">
             <FadeInUp>
@@ -16,30 +15,13 @@ export default function App() {
                 </h1>
             </FadeInUp>
             <div className="project-details">
-                <ProjectCard
-                    opMbfmTitle="Melt Blown Fabric Manufacturing"
-                    opMbfmCopy="Melt blowing is a conventional fabrication method of micro-and
-                    nanofibers where a polymer melt is extruded through ..."
-                    opMbfmImage={Image}
-                />
-                <ProjectCard
-                    opMbfmTitle="Melt Blown Fabric Manufacturing"
-                    opMbfmCopy="Melt blowing is a conventional fabrication method of micro-and
-                    nanofibers where a polymer melt is extruded through ..."
-                    opMbfmImage={Image}
-                />
-                <ProjectCard
-                    opMbfmTitle="Melt Blown Fabric Manufacturing"
-                    opMbfmCopy="Melt blowing is a conventional fabrication method of micro-and
-                    nanofibers where a polymer melt is extruded through ..."
-                    opMbfmImage={Image}
-                />
-                <ProjectCard
-                    opMbfmTitle="Melt Blown Fabric Manufacturing"
-                    opMbfmCopy="Melt blowing is a conventional fabrication method of micro-and
-                    nanofibers where a polymer melt is extruded through ..."
-                    opMbfmImage={Image}
-                />
+                {projectsData.map((e) => (
+                    <ProjectCard
+                        opMbfmTitle={e.projectName}
+                        opMbfmCopy={e.projectDescription}
+                        opMbfmImage={e.projectImage.sourceUrl}
+                    />
+                ))}
             </div>
         </div>
     );

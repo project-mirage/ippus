@@ -1,12 +1,12 @@
 import React from "react";
 import "./WhoWeAre.sass";
 
-function WhoWeAre() {
+function WhoWeAre({ whoWeAreData }) {
     return (
         <Component4
-            heroTitle="Who We Are"
-            hiwSubTitle="Welcome to Industrial Partnership Projects US, your number one source for entrepreneurship and empowering the youth. We're dedicated to providing you the best learning platform to enable you to think independantly, with a focus on creating new innovations"
-            heroCTA2Props={component4Data.heroCTA2Props}
+            heroTitle={whoWeAreData.title}
+            hiwSubTitle={whoWeAreData.subTitle}
+            heroCTA2Props={whoWeAreData.cta}
             data-id="189:1244:an-component-instance"
         />
     );
@@ -31,9 +31,7 @@ function Component4(props) {
             >
                 {hiwSubTitle}
             </div>
-            <HeroCTA2 data-id="148:888:an-component-instance">
-                {heroCTA2Props.children}
-            </HeroCTA2>
+            <HeroCTA2 data-id="148:888:an-component-instance">{heroCTA2Props}</HeroCTA2>
         </div>
     );
 }
