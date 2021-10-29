@@ -55,7 +55,7 @@ function NavDesktop(props) {
                     className="nav-home-link-2"
                     data-id="I148:989;113:589"
                 >
-                    Competition
+                    NVC
                 </Link>
                 <Link
                     to="/contact"

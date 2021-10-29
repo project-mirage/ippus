@@ -1,8 +1,9 @@
 import React from "react";
 import "./Footer.sass";
+import { Link } from "gatsby";
 import ippuslogofooter from "../../images/ippuslogofooter.png";
 import footer from "../../images/footer.png";
-import FadeIn from "../../animations/FadeIn"
+import FadeIn from "../../animations/FadeIn";
 
 function App() {
     return <FooterDesktop {...footerDesktopData} />;
@@ -64,18 +65,30 @@ function FooterDesktop(props) {
                                 <h1 className="preview-1 inter-bold-blue-charcoal-24px">
                                     {preview2}
                                 </h1>
-                                <div className="footer-make-a-donation-copy-3 inter-normal-midnight-16px">
+                                <Link
+                                    to="/"
+                                    className="footer-make-a-donation-copy-3 inter-normal-midnight-16px"
+                                >
                                     {makeADonationCopy4}
-                                </div>
-                                <div className="footer-make-a-donation-copy-5 inter-normal-midnight-16px">
+                                </Link>
+                                <Link
+                                    to="/about"
+                                    className="footer-make-a-donation-copy-5 inter-normal-midnight-16px"
+                                >
                                     {makeADonationCopy6}
-                                </div>
-                                <div className="footer-make-a-donation-copy-7 inter-normal-midnight-16px">
+                                </Link>
+                                <Link
+                                    to="/contact"
+                                    className="footer-make-a-donation-copy-7 inter-normal-midnight-16px"
+                                >
                                     {makeADonationCopy8}
-                                </div>
-                                <div className="footer-make-a-donation-copy-10 inter-normal-midnight-16px">
+                                </Link>
+                                <Link
+                                    to="/contact"
+                                    className="footer-make-a-donation-copy-10 inter-normal-midnight-16px"
+                                >
                                     {makeADonationCopy11}
-                                </div>
+                                </Link>
                             </div>
                         </div>
 

@@ -4,7 +4,7 @@ import * as css from "./DonationForm.module.sass";
 import HeroCTA from "../../HeroCTA/HeroCTA";
 
 export default function DonationForm() {
-    const [selectedButton, setselectedButton] = useState(0);
+    const [selectedButton, setselectedButton] = useState(1);
 
     return (
         <div className={css.formContainer}>
