@@ -41,8 +41,8 @@ export default function AboutPage(data) {
                     />
                 </FadeInUp>
             ))}
-            <Collection heading="Our Team" teamData={ourTeam} />
 
+            <Collection heading="Our Team" teamData={ourTeam} />
             <Footer />
         </div>
     );

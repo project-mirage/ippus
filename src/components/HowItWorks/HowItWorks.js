@@ -151,7 +151,7 @@ export default function HowItWorksCollection({ howItWorksData }) {
     return (
         <>
             <FadeInUp>
-                <h1 className={css.heading}>How it works</h1>
+                <h1 className={css.heading}>How It Works</h1>
             </FadeInUp>
             <div className={css.container}>
                 {howItWorksData.map((e, i) => (
