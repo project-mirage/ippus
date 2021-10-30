@@ -50,24 +50,28 @@ export default function IndexPage(data) {
                 <link rel="icon" type="image/png" href={favicon} />
                 <title>IPPUS - Empower People</title>
             </Helmet>
-            <div style={{ overflow: "hidden" }}>
-                <NavBar />
-                <HeroSection sliderData={sliderData} />
-                <FadeInUp>
-                    <WhatWeDoSection whatWeDoData={whatWeDo} />
-                </FadeInUp>
-                <ProjectsSection projectsData={ourProjects} />
-                <FadeInUp>
-                    <HowItWorks howItWorksData={howItWorksData} />
-                </FadeInUp>
-                <FadeInUp>
-                    <WhoWeAre whoWeAreData={whoWeAreData} />
-                </FadeInUp>
-                <FadeInUp>
-                    <Cards callToActionSectionData={callToActionSectionData} />
-                </FadeInUp>
-                <Footer />
-            </div>
+            <NavBar />
+            <FadeInUp>
+                <div style={{ overflow: "hidden" }}>
+                    <HeroSection sliderData={sliderData} />
+                    <FadeInUp>
+                        <WhatWeDoSection whatWeDoData={whatWeDo} />
+                    </FadeInUp>
+                    <ProjectsSection projectsData={ourProjects} />
+                    <FadeInUp>
+                        <HowItWorks howItWorksData={howItWorksData} />
+                    </FadeInUp>
+                    <FadeInUp>
+                        <WhoWeAre whoWeAreData={whoWeAreData} />
+                    </FadeInUp>
+                    <FadeInUp>
+                        <Cards
+                            callToActionSectionData={callToActionSectionData}
+                        />
+                    </FadeInUp>
+                    <Footer />
+                </div>
+            </FadeInUp>
         </>
     );
 }

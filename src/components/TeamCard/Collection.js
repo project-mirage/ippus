@@ -5,21 +5,38 @@ import FadeInUp from "../../animations/FadeInUp";
 
 export default function Collection({ heading, teamData }) {
     return (
-        <div className={css.collection}>
-            <h1 className={css.heading}>{heading}</h1>
+        <FadeInUp>
+            <div className={css.collection}>
+                <h1 className={css.heading}>{heading}</h1>
 
-            {teamData.map((e) => (
-                <FadeInUp>
-                    <TeamCard
-                        name={e.memberName}
-                        role={e.memberRole}
-                        image={e.memberImage ? e.memberImage.sourceUrl : ""}
-                        waLink={e.whatsapp}
-                        twitLink={e.linkedin}
-                        fbLink={e.facebook}
-                    />
-                </FadeInUp>
-            ))}
-        </div>
+                {teamData.map((e) => (
+                    <FadeInUp>
+                        {e.memberName ? (
+                            <TeamCard
+                                name={e.memberName}
+                                role={e.memberRole}
+                                image={
+                                    e.memberImage ? e.memberImage.sourceUrl : ""
+                                }
+                                waLink={e.whatsapp}
+                                twitLink={e.linkedin}
+                                fbLink={e.facebook}
+                            />
+                        ) : (
+                            <TeamCard
+                                name={e.judgeName}
+                                role={e.judgeRole}
+                                image={
+                                    e.judgeImage ? e.judgeImage.sourceUrl : ""
+                                }
+                                waLink={e.whatsapp}
+                                twitLink={e.linkedin}
+                                fbLink={e.facebook}
+                            />
+                        )}
+                    </FadeInUp>
+                ))}
+            </div>
+        </FadeInUp>
     );
 }

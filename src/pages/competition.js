@@ -3,35 +3,57 @@ import DescriptionSection from "../components/DescriptionSection/DescriptionSect
 import NavBar from "../components/NavBar/NavBar";
 import CustomForm from "../components/contact/customForm/CustomForm";
 import Footer from "../components/Footer/Footer";
+import TeamCardCollection from "../components/TeamCard/Collection";
 import FadeInUp from "../animations/FadeInUp";
+import { graphql } from "gatsby";
 
-export default function CompetitionPage() {
+export default function CompetitionPage(data) {
+    console.log(data);
+
+    let contentSection;
+    let nvcJudges;
+    let registerForm;
+
+    for (let i = 0; i < data.data.allWpPage.edges.length; i++) {
+        const e = data.data.allWpPage.edges[i];
+        if (e.node.competitionPage.competitionContentSection) {
+            contentSection = e.node.competitionPage.competitionContentSection;
+        }
+        if (e.node.competitionPage.registerForm) {
+            registerForm = e.node.competitionPage.registerForm[0];
+        }
+        if (e.node.competitionPage.nvcJudges) {
+            nvcJudges = e.node.competitionPage.nvcJudges;
+        }
+    }
+
+    console.log(contentSection);
+    console.log(registerForm);
+    console.log(nvcJudges);
+
     return (
         <>
             <NavBar />
 
-            <FadeInUp>
-                <DescriptionSection
-                    heading="Competition"
-                    text="Industries create jobs, economic growth and prosperity. Industries create jobs, economic growth and prosperity and much more. Industries create jobs, economic growth and prosperity. Industries create jobs, economic growth and prosperity and much more. Industries create jobs, economic growth and prosperity. Industries create jobs, economic growth and prosperity and much more. Industries create jobs, economic growth and prosperity. Industries create jobs, economic growth and prosperity and much more. Industries create jobs, economic growth and prosperity. Industries create jobs, economic growth and prosperity and much more. Industries create jobs, economic growth and prosperity. Industries create jobs, economic growth and prosperity and much more. Industries create jobs, economic growth and prosperity. Industries create jobs, economic growth and prosperity and much more."
-                />
-            </FadeInUp>
+            {contentSection.map((e) => (
+                <FadeInUp>
+                    <DescriptionSection
+                        heading={e.sectionTitle}
+                        text={e.sectionDescription}
+                    />
+                </FadeInUp>
+            ))}
 
-            <FadeInUp>
-                <DescriptionSection
-                    heading="Rules"
-                    text="Industries create jobs, economic growth and prosperity. Industries create jobs, economic growth and prosperity and much more. Industries create jobs, economic growth and prosperity. Industries create jobs, economic growth and prosperity and much more. Industries create jobs, economic growth and prosperity. Industries create jobs, economic growth and prosperity and much more. Industries create jobs, economic growth and prosperity."
-                />
-            </FadeInUp>
+            <TeamCardCollection heading="Judges" teamData={nvcJudges} />
 
             <FadeInUp>
                 <CustomForm
-                    heading="Register"
-                    boldSubtitle="We are waiting for your email!"
-                    description="Our team will get back to you ASAP with you query. In the mean time you can go through our website to get to know our values, mission and goals. "
-                    address="2952 Lucia Ct, McKinney, TX 75072, USA"
-                    email="nomaanaleemmufti@hotmail.com"
-                    contactNumber="+1 469 931 8345"
+                    heading="Competition Registration"
+                    boldSubtitle={registerForm.heading}
+                    description={registerForm.text}
+                    address={registerForm.address}
+                    email={registerForm.email}
+                    contactNumber={registerForm.phone}
                 />
             </FadeInUp>
 
@@ -39,3 +61,37 @@ export default function CompetitionPage() {
         </>
     );
 }
+
+export const query = graphql`
+    {
+        allWpPage {
+            edges {
+                node {
+                    competitionPage {
+                        competitionContentSection {
+                            sectionDescription
+                            sectionTitle
+                        }
+                        nvcJudges {
+                            facebook
+                            judgeImage {
+                                sourceUrl
+                            }
+                            judgeName
+                            judgeRole
+                            linkedin
+                        }
+                        registerForm {
+                            address
+                            email
+                            fieldGroupName
+                            heading
+                            phone
+                            text
+                        }
+                    }
+                }
+            }
+        }
+    }
+`;

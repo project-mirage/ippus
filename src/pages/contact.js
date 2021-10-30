@@ -4,23 +4,57 @@ import CustomForm from "../components/contact/customForm/CustomForm";
 import DonationForm from "../components/contact/DonationForm/DonationForm";
 import Footer from "../components/Footer/Footer";
 import FadeInUp from "../animations/FadeInUp";
+import { graphql } from "gatsby";
 
-export default function ContactPage() {
+export default function ContactPage(data) {
+    console.log(data);
+
+    let contactForm;
+
+    for (let i = 0; i < data.data.allWpPage.nodes.length; i++) {
+        const e = data.data.allWpPage.nodes[i];
+        if (e.contactPage.contactForm) {
+            contactForm = e.contactPage.contactForm[0];
+        }
+    }
+
+    console.log(contactForm);
+
     return (
         <>
             <NavBar />
             <FadeInUp>
                 <CustomForm
-                    boldSubtitle="We are waiting for your email!"
-                    description="Our team will get back to you ASAP with you query. In the mean time you can go through our website to get to know our values, mission and goals. "
-                    address="2952 Lucia Ct, McKinney, TX 75072, USA"
-                    email="nomaanaleemmufti@hotmail.com"
-                    contactNumber="+1 469 931 8345"
+                    boldSubtitle={contactForm.heading}
+                    description={contactForm.text}
+                    address={contactForm.address}
+                    email={contactForm.email}
+                    contactNumber={contactForm.phone}
                     heading="Contact"
                 />
             </FadeInUp>
-            <DonationForm />
+            <FadeInUp>
+                <DonationForm />
+            </FadeInUp>
             <Footer />
         </>
     );
 }
+
+export const query = graphql`
+    {
+        allWpPage {
+            nodes {
+                contactPage {
+                    contactForm {
+                        heading
+                        text
+                        address
+                        email
+                        phone
+                    }
+                }
+            }
+        }
+    }
+`;

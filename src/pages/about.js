@@ -18,8 +18,8 @@ export default function AboutPage(data) {
     for (let i = 0; i < data.data.allWpPage.nodes.length; i++) {
         const e = data.data.allWpPage.nodes[i];
 
-        if (e.aboutPage.contentSection) {
-            contentSection = e.aboutPage.contentSection;
+        if (e.aboutPage.aboutContentSection) {
+            contentSection = e.aboutPage.aboutContentSection;
         }
         if (e.aboutPage.ourTeam) {
             ourTeam = e.aboutPage.ourTeam;
@@ -53,7 +53,7 @@ export const query = graphql`
         allWpPage {
             nodes {
                 aboutPage {
-                    contentSection {
+                    aboutContentSection {
                         aboutTitle
                         aboutDescription
                     }
