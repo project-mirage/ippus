@@ -5,6 +5,7 @@ import DonationForm from "../components/contact/DonationForm/DonationForm";
 import Footer from "../components/Footer/Footer";
 import FadeInUp from "../animations/FadeInUp";
 import { graphql } from "gatsby";
+import Map from "../components/contact/Map/Map";
 
 export default function ContactPage(data) {
     console.log(data);
@@ -36,6 +37,10 @@ export default function ContactPage(data) {
             <FadeInUp>
                 <DonationForm />
             </FadeInUp>
+            <Map
+                heading="Location on Map"
+                url="https://goo.gl/maps/VLyRxKv3SbcNYA6j9"
+            />
             <Footer />
         </>
     );

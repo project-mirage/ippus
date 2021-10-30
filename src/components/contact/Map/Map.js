@@ -1,27 +1,19 @@
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import * as css from "./map.module.sass";
 import React from "react";
+import mapImage from "../../../images/map.png";
+import * as css from "./Map.module.sass";
 
-export default function Map() {
+export default function Map({ heading, url }) {
     return (
-        <div className={css.map}>
-            {typeof window !== "undefined" && (
-                <MapContainer
-                    center={[51.505, -0.09]}
-                    zoom={13}
-                    scrollWheelZoom={false}
-                >
-                    <TileLayer
-                        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                    />
-                    <Marker position={[51.505, -0.09]}>
-                        <Popup>
-                            A pretty CSS3 popup. <br /> Easily customizable.
-                        </Popup>
-                    </Marker>
-                </MapContainer>
-            )}
+        <div className={css.mapContainer}>
+            <h1 className={css.heading}>{heading}</h1>
+            <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={url}
+                className={css.map}
+            >
+                <img className={css.mapImage} alt="map" src={mapImage} />
+            </a>
         </div>
     );
 }
