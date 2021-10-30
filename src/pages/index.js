@@ -9,6 +9,8 @@ import Cards from "../components/Cards/Cards";
 import Footer from "../components/Footer/Footer";
 import FadeInUp from "../animations/FadeInUp";
 import { graphql } from "gatsby";
+import favicon from "../images/icon.png";
+import { Helmet } from "react-helmet";
 
 export default function IndexPage(data) {
     console.log(data);
@@ -18,7 +20,6 @@ export default function IndexPage(data) {
     let howItWorksData;
     let whoWeAreData;
     let callToActionSectionData;
-
     // deals with the rare case that the nodes array has first or second element null
     for (let i = 0; i < data.data.allWpPage.nodes.length; i++) {
         const e = data.data.allWpPage.nodes[i];
@@ -44,24 +45,30 @@ export default function IndexPage(data) {
     }
 
     return (
-        <div style={{ overflow: "hidden" }}>
-            <NavBar />
-            <HeroSection sliderData={sliderData} />
-            <FadeInUp>
-                <WhatWeDoSection whatWeDoData={whatWeDo} />
-            </FadeInUp>
-            <ProjectsSection projectsData={ourProjects} />
-            <FadeInUp>
-                <HowItWorks howItWorksData={howItWorksData} />
-            </FadeInUp>
-            <FadeInUp>
-                <WhoWeAre whoWeAreData={whoWeAreData} />
-            </FadeInUp>
-            <FadeInUp>
-                <Cards callToActionSectionData={callToActionSectionData} />
-            </FadeInUp>
-            <Footer />
-        </div>
+        <>
+            <Helmet>
+                <link rel="icon" type="image/png" href={favicon} />
+                <title>IPPUS - Empower People</title>
+            </Helmet>
+            <div style={{ overflow: "hidden" }}>
+                <NavBar />
+                <HeroSection sliderData={sliderData} />
+                <FadeInUp>
+                    <WhatWeDoSection whatWeDoData={whatWeDo} />
+                </FadeInUp>
+                <ProjectsSection projectsData={ourProjects} />
+                <FadeInUp>
+                    <HowItWorks howItWorksData={howItWorksData} />
+                </FadeInUp>
+                <FadeInUp>
+                    <WhoWeAre whoWeAreData={whoWeAreData} />
+                </FadeInUp>
+                <FadeInUp>
+                    <Cards callToActionSectionData={callToActionSectionData} />
+                </FadeInUp>
+                <Footer />
+            </div>
+        </>
     );
 }
 
