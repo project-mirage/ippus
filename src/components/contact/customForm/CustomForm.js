@@ -6,7 +6,7 @@ import { ToastContainer, toast, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 
 export default function CustomForm({
-    url,
+    type,
     heading,
     boldSubtitle,
     description,
@@ -104,7 +104,7 @@ export default function CustomForm({
     const handleSubmission = (e) => {
         e.preventDefault();
         const baseUrl = "http://localhost:7000";
-        const type = "contact";
+        // const type = "contact";
         // setting the body content based on the type being passed in
         let bodyContent;
 
@@ -142,7 +142,7 @@ export default function CustomForm({
             progress: undefined,
         });
 
-        fetch(`${baseUrl}/${type}`, requestOptions)
+        fetch(`${baseUrl}/contact`, requestOptions)
             .then(async (response) => {
                 const res = await response.json();
                 // forcing the end of the processing toast timeout

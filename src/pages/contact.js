@@ -26,7 +26,7 @@ export default function ContactPage(data) {
             <NavBar />
             <FadeInUp>
                 <CustomForm
-                    url="contact"
+                    type="contact"
                     boldSubtitle={contactForm.heading}
                     description={contactForm.text}
                     address={contactForm.address}
