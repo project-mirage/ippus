@@ -8,17 +8,19 @@ export default function FormInput({
     type,
     onChange,
     containerClassname,
+    name,
 }) {
     return (
         <div className={containerClassname}>
             <h6 className={css.heading}>{heading}</h6>
             <p className={css.subheading}>{subheading}</p>
             <TextareaAutosize
+                name={name}
+                onChange={onChange}
                 maxRows={10}
                 rows={1}
                 className={css.input}
                 type={type}
-                name={heading}
                 id={heading}
                 className={css.input}
             />

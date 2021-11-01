@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import * as css from "./CustomForm.module.sass";
 import FormInput from "./FormInput";
 import HeroCTA from "../../HeroCTA/HeroCTA";
+import { ToastContainer, toast, Slide } from "react-toastify";
+import "react-toastify/dist/ReactToastify.min.css";
 
 export default function CustomForm({
+    url,
     heading,
     boldSubtitle,
     description,
@@ -81,47 +84,159 @@ export default function CustomForm({
         </svg>
     );
 
+    const initialValues = {
+        fullName: "",
+        email: "",
+        message: "",
+    };
+
+    const [values, setValues] = useState(initialValues);
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setValues((prevState) => ({
+            ...values,
+            [name]: value,
+        }));
+    };
+    console.log(values);
+
+    const handleSubmission = (e) => {
+        e.preventDefault();
+        const baseUrl = "http://localhost:7000";
+        const type = "contact";
+        // setting the body content based on the type being passed in
+        let bodyContent;
+
+        if (
+            values.fullName !== "" &&
+            values.email !== "" &&
+            values.message !== ""
+        ) {
+            bodyContent = JSON.stringify({
+                fullName: values.fullName,
+                email: values.email,
+                message: values.message,
+                type: type,
+            });
+        } else {
+            toast.error(`Please enter correct details! Try again!`);
+            return;
+        }
+
+        console.log(bodyContent);
+
+        const requestOptions = {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: bodyContent,
+        };
+
+        // processing toast without end timer
+        toast.info("Processing... Please wait!", {
+            autoClose: false,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+
+        fetch(`${baseUrl}/${type}`, requestOptions)
+            .then(async (response) => {
+                const res = await response.json();
+                // forcing the end of the processing toast timeout
+                toast.dismiss();
+                console.log(res);
+
+                if (res.success) {
+                    // reset if everything goes to plan
+                    setValues(initialValues);
+                    toast.success(`${res.message}`);
+                } else {
+                    toast.error(`${res.message}`);
+                }
+            })
+            .catch((e) => {
+                console.log(e);
+                // forcing the end of the processing toast timeout
+                toast.dismiss();
+                toast.error(
+                    `The message failed to send. Please try again later.`
+                );
+            });
+    };
+
     return (
-        <div className={css.formContainer}>
-            <h1 className={css.heading}>{heading}</h1>
-            <div className={css.left}>
-                <h2 className={css.boldSubtitle}>{boldSubtitle}</h2>
-                <a className={css.description}>{description}</a>
-                <div className={css.detailsContainer}>
-                    <div className={css.detail}>
-                        {mapPin}
-                        <a className={css.address}>{address}</a>
-                    </div>
-                    <div className={css.detail}>
-                        {sendIcon}
-                        <a className={css.email}>{email}</a>
-                    </div>
-                    <div className={css.detail}>
-                        {phoneIcon}
-                        <a className={css.contactNumber}>{contactNumber}</a>
+        <>
+            <div className={css.formContainer}>
+                <h1 className={css.heading}>{heading}</h1>
+                <div className={css.left}>
+                    <h2 className={css.boldSubtitle}>{boldSubtitle}</h2>
+                    <a className={css.description}>{description}</a>
+                    <div className={css.detailsContainer}>
+                        <div className={css.detail}>
+                            {mapPin}
+                            <a className={css.address}>{address}</a>
+                        </div>
+                        <div className={css.detail}>
+                            {sendIcon}
+                            <a className={css.email}>{email}</a>
+                        </div>
+                        <div className={css.detail}>
+                            {phoneIcon}
+                            <a className={css.contactNumber}>{contactNumber}</a>
+                        </div>
                     </div>
                 </div>
+                <div className={css.right}>
+                    <form className={css.form}>
+                        <FormInput
+                            onChange={handleInputChange}
+                            heading="Full Name"
+                            name="fullName"
+                            subheading="Enter your full name"
+                            type="text"
+                        />
+                        <FormInput
+                            onChange={handleInputChange}
+                            heading="Email"
+                            name="email"
+                            subheading="Enter valid email address"
+                            type="email"
+                        />
+                        <FormInput
+                            onChange={handleInputChange}
+                            heading="Message"
+                            name="message"
+                            subheading="Enter your message"
+                            type="text"
+                        />
+                        <HeroCTA>
+                            <button
+                                onClick={handleSubmission}
+                                className={css.button}
+                                type="submit"
+                            >
+                                Submit Form
+                            </button>
+                        </HeroCTA>
+                    </form>
+                </div>
             </div>
-            <div className={css.right}>
-                <form className={css.form} action="">
-                    <FormInput
-                        heading="Full Name"
-                        subheading="Enter your full name"
-                        type="text"
-                    />
-                    <FormInput
-                        heading="Email"
-                        subheading="Enter valid email address"
-                        type="email"
-                    />
-                    <FormInput
-                        heading="Message"
-                        subheading="Enter your message"
-                        type="text"
-                    />
-                    <HeroCTA>Submit Form</HeroCTA>
-                </form>
-            </div>
-        </div>
+            <ToastContainer
+                position="bottom-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="colored"
+                transition={Slide}
+            />
+        </>
     );
 }
