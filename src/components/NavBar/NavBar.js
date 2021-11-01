@@ -64,11 +64,13 @@ function NavDesktop(props) {
                 >
                     {navHomeLink3}
                 </Link>
-                <img
-                    className="nav-cta animate-enter"
-                    data-id="I148:989;113:590"
-                    src={navCta}
-                />
+                <Link to="/contact/#donationForm">
+                    <img
+                        className="nav-cta animate-enter"
+                        data-id="I148:989;113:590"
+                        src={navCta}
+                    />
+                </Link>
             </div>
 
             <div className="nav-right-mobile">
