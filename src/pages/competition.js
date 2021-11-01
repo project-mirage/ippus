@@ -48,7 +48,7 @@ export default function CompetitionPage(data) {
 
             <FadeInUp>
                 <CustomForm
-                    type="competitionRegistration"
+                    type="Competition Registration"
                     heading="Competition Registration"
                     boldSubtitle={registerForm.heading}
                     description={registerForm.text}

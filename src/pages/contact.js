@@ -26,7 +26,7 @@ export default function ContactPage(data) {
             <NavBar />
             <FadeInUp>
                 <CustomForm
-                    type="contact"
+                    type="Contact"
                     boldSubtitle={contactForm.heading}
                     description={contactForm.text}
                     address={contactForm.address}
@@ -36,7 +36,7 @@ export default function ContactPage(data) {
                 />
             </FadeInUp>
             <FadeInUp>
-                <DonationForm />
+                <DonationForm type="Donation" />
             </FadeInUp>
             <Map
                 heading="Location on Map"

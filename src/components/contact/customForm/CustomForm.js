@@ -102,7 +102,7 @@ export default function CustomForm({
     console.log(values);
 
     const handleSubmission = (e) => {
-        // e.preventDefault();
+        e.preventDefault();
         const baseUrl = "http://localhost:7000";
         // const type = "contact";
         // setting the body content based on the type being passed in
@@ -114,9 +114,9 @@ export default function CustomForm({
             values.message !== ""
         ) {
             bodyContent = JSON.stringify({
-                fullName: values.fullName,
-                email: values.email,
-                message: values.message,
+                fullName: `Name: ${values.fullName}`,
+                email: `Email: ${values.email}`,
+                message: `Message: ${values.message}`,
                 type: type,
             });
         } else {
