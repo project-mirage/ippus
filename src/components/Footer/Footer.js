@@ -84,7 +84,7 @@ function FooterDesktop(props) {
                                     {makeADonationCopy8}
                                 </Link>
                                 <Link
-                                    to="/contact"
+                                    to="/contact/#donationForm"
                                     className="footer-make-a-donation-copy-10 inter-normal-midnight-16px"
                                 >
                                     {makeADonationCopy11}

@@ -7,7 +7,7 @@ export default function DonationForm() {
     const [selectedButton, setselectedButton] = useState(1);
 
     return (
-        <div className={css.formContainer}>
+        <div className={css.formContainer} id="donationForm">
             <h4 className={css.donationType}>Select Donation Type</h4>
 
             <div className={css.switcher}>

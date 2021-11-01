@@ -14,16 +14,26 @@ export default function FormInput({
         <div className={containerClassname}>
             <h6 className={css.heading}>{heading}</h6>
             <p className={css.subheading}>{subheading}</p>
-            <TextareaAutosize
-                name={name}
-                onChange={onChange}
-                maxRows={10}
-                rows={1}
-                className={css.input}
-                type={type}
-                id={heading}
-                className={css.input}
-            />
+            {type === "area" ? (
+                <TextareaAutosize
+                    name={name}
+                    onChange={onChange}
+                    maxRows={10}
+                    rows={1}
+                    className={css.input}
+                    type={type}
+                    id={heading}
+                    required={true}
+                />
+            ) : (
+                <input
+                    name={name}
+                    onChange={onChange}
+                    required={true}
+                    className={css.input}
+                    type={type}
+                />
+            )}
         </div>
     );
 }

@@ -102,7 +102,7 @@ export default function CustomForm({
     console.log(values);
 
     const handleSubmission = (e) => {
-        e.preventDefault();
+        // e.preventDefault();
         const baseUrl = "http://localhost:7000";
         // const type = "contact";
         // setting the body content based on the type being passed in
@@ -210,7 +210,7 @@ export default function CustomForm({
                             heading="Message"
                             name="message"
                             subheading="Enter your message"
-                            type="text"
+                            type="area"
                         />
                         <HeroCTA>
                             <button
