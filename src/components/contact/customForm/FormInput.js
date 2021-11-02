@@ -9,6 +9,7 @@ export default function FormInput({
     onChange,
     containerClassname,
     name,
+    value,
 }) {
     return (
         <div className={containerClassname}>
@@ -24,9 +25,11 @@ export default function FormInput({
                     type={type}
                     id={heading}
                     required={true}
+                    value={value}
                 />
             ) : (
                 <input
+                    value={value}
                     name={name}
                     onChange={onChange}
                     required={true}

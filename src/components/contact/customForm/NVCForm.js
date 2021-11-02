@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import * as css from "./CustomForm.module.sass";
+import * as css from "./NVCForm.module.sass";
 import FormInput from "./FormInput";
 import HeroCTA from "../../HeroCTA/HeroCTA";
 import { ToastContainer, toast, Slide } from "react-toastify";
@@ -11,7 +11,7 @@ function validateEmail(email) {
     return re.test(String(email).toLowerCase());
 }
 
-export default function CustomForm({
+export default function NVCForm({
     type,
     heading,
     boldSubtitle,
@@ -93,7 +93,8 @@ export default function CustomForm({
     const initialValues = {
         fullName: "",
         email: "",
-        message: "",
+        businessName: "",
+        businessPlan: "",
     };
 
     const [values, setValues] = useState(initialValues);
@@ -117,13 +118,15 @@ export default function CustomForm({
         if (
             values.fullName !== "" &&
             values.email !== "" &&
-            values.message !== "" &&
+            values.businessName !== "" &&
+            values.businessPlan !== "" &&
             validateEmail(values.email)
         ) {
             bodyContent = JSON.stringify({
                 fullName: `Name: ${values.fullName}`,
                 email: `Email: ${values.email}`,
-                message: `Message: ${values.message}`,
+                businessName: `Business Name: ${values.businessName}`,
+                businessPlan: `Business Plan: ${values.businessPlan}`,
                 type: type,
             });
         } else {
@@ -199,24 +202,35 @@ export default function CustomForm({
                 <div className={css.right}>
                     <form className={css.form}>
                         <FormInput
+                            value={values.fullName}
                             onChange={handleInputChange}
-                            heading="Full Name"
+                            heading="Contact Name"
                             name="fullName"
-                            subheading="Enter your full name"
+                            subheading="Enter Contact Name"
                             type="text"
                         />
                         <FormInput
+                            value={values.email}
                             onChange={handleInputChange}
-                            heading="Email"
+                            heading="Contact Email"
                             name="email"
-                            subheading="Enter valid email address"
+                            subheading="Enter Contact Email"
                             type="email"
                         />
                         <FormInput
+                            value={values.businessName}
                             onChange={handleInputChange}
-                            heading="Message"
-                            name="message"
-                            subheading="Enter your message"
+                            heading="Name of Business/Group Name"
+                            name="businessName"
+                            subheading="Enter Name of Business/Group Name"
+                            type="text"
+                        />
+                        <FormInput
+                            value={values.businessPlan}
+                            onChange={handleInputChange}
+                            heading="Brief Plan of Proposed Business"
+                            name="businessPlan"
+                            subheading="Enter Brief Plan of Proposed Business"
                             type="area"
                         />
                         <HeroCTA>

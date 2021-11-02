@@ -1,11 +1,11 @@
 import React from "react";
 import DescriptionSection from "../components/DescriptionSection/DescriptionSection";
 import NavBar from "../components/NavBar/NavBar";
-import CustomForm from "../components/contact/customForm/CustomForm";
 import Footer from "../components/Footer/Footer";
 import TeamCardCollection from "../components/TeamCard/Collection";
 import FadeInUp from "../animations/FadeInUp";
 import { graphql } from "gatsby";
+import NVCForm from "../components/contact/customForm/NVCForm";
 
 export default function CompetitionPage(data) {
     console.log(data);
@@ -47,7 +47,7 @@ export default function CompetitionPage(data) {
             <TeamCardCollection heading="Judges" teamData={nvcJudges} />
 
             <FadeInUp>
-                <CustomForm
+                <NVCForm
                     type="Competition Registration"
                     heading="Competition Registration"
                     boldSubtitle={registerForm.heading}

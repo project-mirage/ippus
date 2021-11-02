@@ -1,11 +1,11 @@
 import React from "react";
 import NavBar from "../components/NavBar/NavBar";
-import CustomForm from "../components/contact/customForm/CustomForm";
 import DonationForm from "../components/contact/DonationForm/DonationForm";
 import Footer from "../components/Footer/Footer";
 import FadeInUp from "../animations/FadeInUp";
 import { graphql } from "gatsby";
 import Map from "../components/contact/Map/Map";
+import ContactForm from "../components/contact/contactForm/contactForm";
 
 export default function ContactPage(data) {
     console.log(data);
@@ -25,7 +25,7 @@ export default function ContactPage(data) {
         <>
             <NavBar />
             <FadeInUp>
-                <CustomForm
+                <ContactForm
                     type="Contact"
                     boldSubtitle={contactForm.heading}
                     description={contactForm.text}
