@@ -2,7 +2,7 @@ import React from "react";
 import WhatWeDoCard from "../WhatWeDoCard/WhatWeDoCard";
 import "./WhatWeDoSection.sass";
 import FadeInWhenVisible from "../../animations/FadeIn";
-import icon1 from "../../images/power.svg";
+import icon1 from "../../images/Power.svg";
 import icon2 from "../../images/target.svg";
 import icon3 from "../../images/beat.svg";
 
