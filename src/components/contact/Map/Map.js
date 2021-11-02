@@ -1,5 +1,5 @@
 import React from "react";
-import mapImage from "../../../images/map.png";
+import mapImage from "../../../images/map.PNG";
 import * as css from "./Map.module.sass";
 
 export default function Map({ heading, url }) {
