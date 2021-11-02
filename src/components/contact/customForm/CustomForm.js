@@ -5,6 +5,12 @@ import HeroCTA from "../../HeroCTA/HeroCTA";
 import { ToastContainer, toast, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 
+function validateEmail(email) {
+    const re =
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
 export default function CustomForm({
     type,
     heading,
@@ -111,7 +117,8 @@ export default function CustomForm({
         if (
             values.fullName !== "" &&
             values.email !== "" &&
-            values.message !== ""
+            values.message !== "" &&
+            validateEmail(values.email)
         ) {
             bodyContent = JSON.stringify({
                 fullName: `Name: ${values.fullName}`,
