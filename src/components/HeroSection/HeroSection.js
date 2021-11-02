@@ -10,7 +10,7 @@ export default function HeroSection(props) {
     const { sliderData } = props;
     const [currentSlide, setCurrentSlide] = useState(0);
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         arrows: false,
         speed: 500,
