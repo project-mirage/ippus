@@ -5,7 +5,7 @@ import Footer from "../components/Footer/Footer";
 import FadeInUp from "../animations/FadeInUp";
 import { graphql } from "gatsby";
 import Map from "../components/contact/Map/Map";
-import ContactForm from "../components/contact/contactForm/contactForm";
+import ContactForm from "../components/contact/contactForm/ContactForm";
 
 export default function ContactPage(data) {
     console.log(data);
