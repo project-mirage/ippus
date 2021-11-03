@@ -109,7 +109,7 @@ export default function ContactForm({
 
     const handleSubmission = (e) => {
         e.preventDefault();
-        const baseUrl = "http://localhost:7000";
+        const baseUrl = "https://ippus-backend.herokuapp.com";
         // const type = "contact";
         // setting the body content based on the type being passed in
         let bodyContent;
