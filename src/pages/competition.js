@@ -5,6 +5,7 @@ import Footer from "../components/Footer/Footer";
 import TeamCardCollection from "../components/TeamCard/Collection";
 import FadeInUp from "../animations/FadeInUp";
 import { graphql } from "gatsby";
+import NVCImages from "../components/NVCImages/NVCImages";
 import NVCForm from "../components/contact/customForm/NVCForm";
 
 export default function CompetitionPage(data) {
@@ -34,6 +35,8 @@ export default function CompetitionPage(data) {
     return (
         <>
             <NavBar />
+
+            <NVCImages />
 
             {contentSection.map((e) => (
                 <FadeInUp>
