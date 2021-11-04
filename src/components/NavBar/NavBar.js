@@ -89,15 +89,14 @@ function NavDesktop(props) {
                 )}
                 {isNavOpen && (
                     <div className="nav-mobile">
-                        <Link to="/">Home</Link>
-                        <Link to="/about">About</Link>
-                        <Link to="/contact">Contact</Link>
-                        <Link to="/competition">NVC</Link>
+                        <Link className="navLinks" to="/">Home</Link>
+                        <Link className="navLinks" to="/about">About</Link>
+                        <Link className="navLinks" to="/contact">Contact</Link>
+                        <Link className="navLinks" to="/competition">NVC</Link>
                         <HeroCTA
-                            style={{ marginTop: "20px", marginBottom: "20px" }}
-                        >
-                            Donate Now
-                        </HeroCTA>
+                            text="Donate Now"
+                            href="/contact#donationForm"
+                        />
                     </div>
                 )}
             </div>
