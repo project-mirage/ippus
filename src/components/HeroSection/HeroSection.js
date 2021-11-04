@@ -56,7 +56,7 @@ export default function HeroSection(props) {
                                     {e.title}
                                 </h1>
                                 <div className="controls">
-                                    <HeroCTA>{e.cta}</HeroCTA>
+                                    <HeroCTA text={e.cta} />
                                 </div>
                             </div>
                         </>

@@ -222,15 +222,7 @@ export default function ContactForm({
                             subheading="Enter your message"
                             type="area"
                         />
-                        <HeroCTA>
-                            <button
-                                onClick={handleSubmission}
-                                className={css.button}
-                                type="submit"
-                            >
-                                Submit Form
-                            </button>
-                        </HeroCTA>
+                        <HeroCTA text="Submit Form" onClick={handleSubmission} />
                     </form>
                 </div>
             </div>

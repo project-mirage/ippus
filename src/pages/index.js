@@ -62,14 +62,14 @@ export default function IndexPage(data) {
                     <FadeInUp>
                         <ProjectsSection projectsData={ourProjects} />
                     </FadeInUp>
-                    {/* <FadeInUp> */}
+                    <FadeInUp>
                     <Flyers
                         image={flyer1}
                         heading="New Venture Contest"
                         text="Industrial Partnership Projects (IPP), in collaboration with Engineers for Community Welfare (ECW) of Pakistan, Khwarzemic Institute of Computer Sciences (KICS) Pakistan, and Akhuwat Pakistan plans to host a competition for young entrepreneurs from December 15, 2021 till April 23, 2022. This will be a business ideas competition, inspiring young entrepreneurs to develop their business dreams to make them real. All entrepreneurs, including Graduate and undergraduate students, can join to promote their proposals and compete for up to $10,000 interest free loan for starting their business."
                         buttonCTA="Learn more about NVC"
                     />
-                    {/* </FadeInUp> */}
+                    </FadeInUp>
                     <FadeInUp>
                         <HowItWorks howItWorksData={howItWorksData} />
                     </FadeInUp>

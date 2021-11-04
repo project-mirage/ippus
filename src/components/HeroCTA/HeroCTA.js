@@ -1,21 +1,20 @@
 import React from "react";
-import "./HeroCTA.sass";
+import * as css from "./HeroCTA.module.sass";
+import { Link } from "gatsby";
 
-function HeroCTA(props) {
-    const { children, style } = props;
-
+function HeroCTA({ onClick, text, href }) {
     return (
-        <div
-            style={style}
-            className="hero-cta animate-enter2"
-            show-on-scroll="true"
-        >
-            <div className="label">
-                <div className="label-1 inter-semi-bold-soapstone-20px">
-                    {children}
-                </div>
-            </div>
-        </div>
+        <>
+            {onClick ? (
+                <button onClick={onClick} className={css.heroButton}>
+                    {text}
+                </button>
+            ) : (
+                <Link to={href} className={css.heroButton}>
+                    {text}
+                </Link>
+            )}
+        </>
     );
 }
 

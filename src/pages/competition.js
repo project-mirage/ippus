@@ -36,7 +36,9 @@ export default function CompetitionPage(data) {
         <>
             <NavBar />
 
-            <NVCImages />
+            <FadeInUp>
+                <NVCImages />
+            </FadeInUp>
 
             {contentSection.map((e) => (
                 <FadeInUp>

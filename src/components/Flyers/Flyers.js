@@ -10,9 +10,7 @@ export default function Flyers({ image, heading, text, buttonCTA }) {
             <div className={css.description}>
                 <h1 className={css.headingDesktop}>{heading}</h1>
                 <p className={css.text}>{text}</p>
-                <HeroCTA>
-                    <button className={css.button}>{buttonCTA}</button>
-                </HeroCTA>
+                <HeroCTA href="/competition" text={buttonCTA} />
             </div>
         </div>
     );

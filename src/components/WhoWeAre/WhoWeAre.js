@@ -1,5 +1,6 @@
 import React from "react";
 import "./WhoWeAre.sass";
+import HeroCTA from "../HeroCTA/HeroCTA";
 
 function WhoWeAre({ whoWeAreData }) {
     return (
@@ -31,24 +32,7 @@ function Component4(props) {
             >
                 {hiwSubTitle}
             </div>
-            <HeroCTA2 data-id="148:888:an-component-instance">{heroCTA2Props}</HeroCTA2>
-        </div>
-    );
-}
-
-function HeroCTA2(props) {
-    const { children } = props;
-
-    return (
-        <div className="hero-cta animate-enter1" data-id="148:888">
-            <div className="label" data-id="I148:888;11:308">
-                <div
-                    className="label-1 inter-semi-bold-soapstone-20px"
-                    data-id="I148:888;11:310"
-                >
-                    {children}
-                </div>
-            </div>
+            <HeroCTA text={heroCTA2Props} href="/contact" />
         </div>
     );
 }

@@ -166,15 +166,7 @@ export default function DonationForm({ type }) {
                         type="email"
                         containerClassname={css.donationInput}
                     />
-                    <HeroCTA>
-                        <button
-                            onClick={handleSubmission}
-                            className={css.button}
-                            type="submit"
-                        >
-                            Submit Form
-                        </button>
-                    </HeroCTA>
+                    <HeroCTA onClick={handleSubmission} text="Submit Form" />
                 </div>
             </div>
             <ToastContainer

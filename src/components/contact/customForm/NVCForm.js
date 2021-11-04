@@ -233,15 +233,12 @@ export default function NVCForm({
                             subheading="Enter Brief Plan of Proposed Business"
                             type="area"
                         />
-                        <HeroCTA>
-                            <button
-                                onClick={handleSubmission}
-                                className={css.button}
-                                type="submit"
-                            >
-                                Submit Form
-                            </button>
-                        </HeroCTA>
+                        <HeroCTA
+                            onClick={(e) => {
+                                handleSubmission(e);
+                            }}
+                            text="Submit Form"
+                        />
                     </form>
                 </div>
             </div>
