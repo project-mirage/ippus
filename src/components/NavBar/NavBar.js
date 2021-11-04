@@ -5,6 +5,7 @@ import ham from "../../images/ham.svg";
 import closeHam from "../../images/closeHam.svg";
 import useToggle from "../../hooks/useToggle";
 import HeroCTA from "../HeroCTA/HeroCTA";
+import { motion, AnimatePresence } from "framer-motion";
 
 function NavBar() {
     return (
@@ -87,18 +88,50 @@ function NavDesktop(props) {
                         alt="cross icon to close menu"
                     />
                 )}
-                {isNavOpen && (
-                    <div className="nav-mobile">
-                        <Link className="navLinks" to="/">Home</Link>
-                        <Link className="navLinks" to="/about">About</Link>
-                        <Link className="navLinks" to="/contact">Contact</Link>
-                        <Link className="navLinks" to="/competition">NVC</Link>
-                        <HeroCTA
-                            text="Donate Now"
-                            href="/contact#donationForm"
-                        />
-                    </div>
-                )}
+                <AnimatePresence>
+                    {isNavOpen && (
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="nav-mobile"
+                        >
+                            <Link
+                                onClick={toggleisNavOpen}
+                                className="navLinks"
+                                to="/"
+                            >
+                                Home
+                            </Link>
+                            <Link
+                                onClick={toggleisNavOpen}
+                                className="navLinks"
+                                to="/about"
+                            >
+                                About
+                            </Link>
+                            <Link
+                                onClick={toggleisNavOpen}
+                                className="navLinks"
+                                to="/contact"
+                            >
+                                Contact
+                            </Link>
+                            <Link
+                                onClick={toggleisNavOpen}
+                                className="navLinks"
+                                to="/competition"
+                            >
+                                NVC
+                            </Link>
+                            <HeroCTA
+                                text="Donate Now"
+                                href="/contact#donationForm"
+                            />
+                        </motion.div>
+                    )}
+                </AnimatePresence>
             </div>
         </div>
     );
