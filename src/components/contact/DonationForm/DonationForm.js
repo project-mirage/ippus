@@ -12,7 +12,7 @@ function validateEmail(email) {
 }
 
 export default function DonationForm({ type }) {
-    const [selectedButton, setselectedButton] = useState(1);
+    const [selectedButton, setselectedButton] = useState(0);
 
     const initialValues = {
         amount: "",
@@ -49,9 +49,12 @@ export default function DonationForm({ type }) {
         ) {
             bodyContent = JSON.stringify({
                 fullName: `Name: ${values.fullName}`,
-                amount: `Amount: ${values.amount}Rs.`,
+                amount: `Amount: Rs. ${values.amount}`,
                 email: `Email: ${values.email}`,
                 contact: `Contact: ${values.contact}`,
+                typeOfDonation: `Type of donation: ${
+                    selectedButton === 0 ? "One Time" : "Monthly"
+                }`,
                 type: type,
             });
         } else {
