@@ -3,6 +3,8 @@ import * as css from "./HeroCTA.module.sass";
 import { Link } from "gatsby";
 
 function HeroCTA({ onClick, text, href }) {
+    // console.log(text);
+    // console.log(href);
     return (
         <>
             {onClick ? (

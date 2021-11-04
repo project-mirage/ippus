@@ -43,7 +43,7 @@ export default function HeroSection(props) {
         <div className="hero-section">
             <div className="overlap-group-1">
                 <Slider {...settings}>
-                    {sliderData.map((e) => (
+                    {sliderData.map((e, i) => (
                         <>
                             <div className="colorBg">
                                 <img
@@ -56,7 +56,9 @@ export default function HeroSection(props) {
                                     {e.title}
                                 </h1>
                                 <div className="controls">
-                                    <HeroCTA text={e.cta} />
+                                    <HeroCTA href={e.ctaHref} text={e.cta} />
+                                    {/* {console.log(e.ctaHref)}
+                                    <Link to={e.ctaHref}>{e.cta}</Link> */}
                                 </div>
                             </div>
                         </>

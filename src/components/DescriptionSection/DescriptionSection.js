@@ -13,8 +13,11 @@ export default function DescriptionSection({ heading, text }) {
                 className={css.text}
                 dangerouslySetInnerHTML={{ __html: text }}
             /> */}
-            <div className={css.text}>
-                <ReadMoreReact
+            <div
+                className={css.text}
+                dangerouslySetInnerHTML={{ __html: text }}
+            >
+                {/* <ReadMoreReact
                     className="read-more-button"
                     text={text}
                     min={500}
@@ -22,7 +25,7 @@ export default function DescriptionSection({ heading, text }) {
                     ideal={550}
                     max={600}
                     // readMoreText="read more"
-                />
+                /> */}
             </div>
         </div>
     );
