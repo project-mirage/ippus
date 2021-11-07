@@ -1,7 +1,7 @@
 import React from "react";
 import * as css from "./NVCImages.module.sass";
-import img1 from "../../images/flyer1.png"
-import img2 from "../../images/flyer2.png"
+import img1 from "../../images/flyer1.webp";
+import img2 from "../../images/flyer2.webp";
 
 export default function Flyers({ image1, image2 }) {
     return (
