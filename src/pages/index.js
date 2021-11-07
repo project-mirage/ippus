@@ -12,7 +12,7 @@ import { graphql } from "gatsby";
 import favicon from "../images/icon.png";
 import Flyers from "../components/Flyers/Flyers";
 import { Helmet } from "react-helmet";
-import flyer1 from "../images/flyer1.png";
+import flyer1 from "../images/flyer1.webp";
 
 export default function IndexPage(data) {
     console.log(data);

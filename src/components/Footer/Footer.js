@@ -1,7 +1,6 @@
 import React from "react";
 import "./Footer.sass";
 import { Link } from "gatsby";
-import ippuslogofooter from "../../images/ippuslogofooter.png";
 import footer from "../../images/footer.png";
 import FadeIn from "../../animations/FadeIn";
 
@@ -125,7 +124,6 @@ const footerDesktopData = {
     makeADonationCopy9: "LinkedIn",
     makeADonationCopy10: "Twitter",
     makeADonationCopy11: "Donate",
-    preview: ippuslogofooter,
     preview2: "Pages",
     preview3: "Social Links",
     preview4: footer,
