@@ -12,7 +12,7 @@ export default function WhatWeDoSection({ whatWeDoData }) {
     return (
         <div className="wwd-section">
             <h1 className="hero-title-1 merriweather-bold-darkblue-136px">
-                What We Do
+                What Do We Do
             </h1>
             <div className="wwd-details">
                 {whatWeDoData.map((e, i) => (

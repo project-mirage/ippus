@@ -28,11 +28,9 @@ function NavDesktop(props) {
 
     return (
         <div className="nav-desktop animate-enter1" data-id="148:989">
-            <img
-                className="nav-left"
-                data-id="I148:989;113:583"
-                src={navLeft}
-            />
+            <h1 className="nav-left">
+                IPP US
+            </h1>
             <div
                 className="nav-right inter-medium-blue-charcoal-18px"
                 data-id="I148:989;113:586"

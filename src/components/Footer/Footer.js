@@ -36,7 +36,7 @@ function FooterDesktop(props) {
                 <div className="footerContainer">
                     <div className="top">
                         <div className="leftdescription">
-                            <img className="preview" src={preview} />
+                            <h1 className="nav-left footerBottom">IPP US</h1>
                             <p className="footer-make-a-donation-copy inter-normal-midnight-16px">
                                 {makeADonationCopy}
                             </p>
