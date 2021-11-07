@@ -7,6 +7,8 @@ import FadeInUp from "../animations/FadeInUp";
 import { graphql } from "gatsby";
 import NVCImages from "../components/NVCImages/NVCImages";
 import NVCForm from "../components/contact/customForm/NVCForm";
+import favicon from "../images/icon.png";
+import { Helmet } from "react-helmet";
 
 export default function CompetitionPage(data) {
     console.log(data);
@@ -34,6 +36,10 @@ export default function CompetitionPage(data) {
 
     return (
         <>
+            <Helmet>
+                <link rel="icon" type="image/png" href={favicon} />
+                <title>IPPUS - Empower People</title>
+            </Helmet>
             <NavBar />
 
             <FadeInUp>

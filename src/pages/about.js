@@ -5,6 +5,8 @@ import Footer from "../components/Footer/Footer";
 import Collection from "../components/TeamCard/Collection";
 import FadeInUp from "../animations/FadeInUp";
 import { graphql } from "gatsby";
+import favicon from "../images/icon.png";
+import { Helmet } from "react-helmet";
 
 export default function AboutPage(data) {
     console.log(data);
@@ -30,7 +32,11 @@ export default function AboutPage(data) {
     console.log(ourTeam);
 
     return (
-        <div>
+        <>
+            <Helmet>
+                <link rel="icon" type="image/png" href={favicon} />
+                <title>IPPUS - Empower People</title>
+            </Helmet>
             <NavBar />
 
             {contentSection.map((e) => (
@@ -44,7 +50,7 @@ export default function AboutPage(data) {
 
             <Collection heading="Our Team" teamData={ourTeam} />
             <Footer />
-        </div>
+        </>
     );
 }
 

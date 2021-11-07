@@ -6,6 +6,8 @@ import FadeInUp from "../animations/FadeInUp";
 import { graphql } from "gatsby";
 import Map from "../components/contact/Map/Map";
 import ContactForm from "../components/contact/contactForm/ContactForm";
+import favicon from "../images/icon.png";
+import { Helmet } from "react-helmet";
 
 export default function ContactPage(data) {
     console.log(data);
@@ -23,6 +25,10 @@ export default function ContactPage(data) {
 
     return (
         <>
+            <Helmet>
+                <link rel="icon" type="image/png" href={favicon} />
+                <title>IPPUS - Empower People</title>
+            </Helmet>
             <NavBar />
             <FadeInUp>
                 <ContactForm
