@@ -5,7 +5,7 @@ import ham from "../../images/ham.svg";
 import closeHam from "../../images/closeHam.svg";
 import useToggle from "../../hooks/useToggle";
 import HeroCTA from "../HeroCTA/HeroCTA";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useViewportScroll } from "framer-motion";
 
 function NavBar() {
     return (
@@ -23,114 +23,134 @@ function NavBar() {
 export default NavBar;
 
 function NavDesktop(props) {
+    const { scrollY } = useViewportScroll();
     const [isNavOpen, toggleisNavOpen] = useToggle();
-    const { navLeft, navHomeLink, navHomeLink2, navHomeLink3, navCta } = props;
+    const [isNavVisible, isNavVisibleTrue, isNavVisibleFalse] = useToggle();
+    const { navHomeLink, navHomeLink2, navHomeLink3, navCta } = props;
+    const scrollLocation = 500;
+
+    scrollY.onChange((y) => {
+        if (y >= scrollLocation) {
+            isNavVisibleTrue();
+        }
+        if (y <= scrollLocation) {
+            isNavVisibleFalse();
+        }
+    });
 
     return (
-        <div className="nav-desktop animate-enter1" data-id="148:989">
-            <h1 className="nav-left">
-                IPP US
-            </h1>
-            <div
-                className="nav-right inter-medium-blue-charcoal-18px"
-                data-id="I148:989;113:586"
-            >
-                <Link
-                    to="/"
-                    className="nav-home-link hvr-underline-from-center"
-                    data-id="I148:989;113:587"
-                >
-                    {navHomeLink}
-                </Link>
-                <Link
-                    to="/about"
-                    className="nav-home-link-1 hvr-underline-from-center"
-                    data-id="I148:989;113:588"
-                >
-                    {navHomeLink2}
-                </Link>
-                <Link
-                    to="/competition"
-                    className="nav-home-link-2 hvr-underline-from-center"
-                    data-id="I148:989;113:589"
-                >
-                    NVC
-                </Link>
-                <Link
-                    to="/contact"
-                    className="nav-home-link-2 hvr-underline-from-center"
-                    data-id="I148:989;113:589"
-                >
-                    {navHomeLink3}
-                </Link>
-                <Link to="/contact/#donationForm">
-                    <img
-                        className="nav-cta animate-enter"
-                        data-id="I148:989;113:590"
-                        src={navCta}
-                    />
-                </Link>
-            </div>
-
-            <div className="nav-right-mobile">
-                {!isNavOpen ? (
-                    <img
-                        onClick={toggleisNavOpen}
-                        src={ham}
-                        alt="hamburger icon to open menu"
-                    />
-                ) : (
-                    <img
-                        onClick={toggleisNavOpen}
-                        src={closeHam}
-                        alt="cross icon to close menu"
-                    />
-                )}
-                <AnimatePresence>
-                    {isNavOpen && (
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.2 }}
-                            className="nav-mobile"
+        <>
+            <AnimatePresence>
+                {isNavVisible && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="nav-desktop animate-enter1"
+                        data-id="148:989"
+                    >
+                        <h1 className="nav-left">IPP US</h1>
+                        <div
+                            className="nav-right inter-medium-blue-charcoal-18px"
+                            data-id="I148:989;113:586"
                         >
                             <Link
-                                onClick={toggleisNavOpen}
-                                className="navLinks hvr-underline-from-center"
                                 to="/"
+                                className="nav-home-link hvr-underline-from-center"
+                                data-id="I148:989;113:587"
                             >
-                                Home
+                                {navHomeLink}
                             </Link>
                             <Link
-                                onClick={toggleisNavOpen}
-                                className="navLinks hvr-underline-from-center"
                                 to="/about"
+                                className="nav-home-link-1 hvr-underline-from-center"
+                                data-id="I148:989;113:588"
                             >
-                                About
+                                {navHomeLink2}
                             </Link>
                             <Link
-                                onClick={toggleisNavOpen}
-                                className="navLinks hvr-underline-from-center"
-                                to="/contact"
-                            >
-                                Contact
-                            </Link>
-                            <Link
-                                onClick={toggleisNavOpen}
-                                className="navLinks hvr-underline-from-center"
                                 to="/competition"
+                                className="nav-home-link-2 hvr-underline-from-center"
+                                data-id="I148:989;113:589"
                             >
                                 NVC
                             </Link>
-                            <HeroCTA
-                                text="Donate Now"
-                                href="/contact#donationForm"
-                            />
-                        </motion.div>
-                    )}
-                </AnimatePresence>
-            </div>
-        </div>
+                            <Link
+                                to="/contact"
+                                className="nav-home-link-2 hvr-underline-from-center"
+                                data-id="I148:989;113:589"
+                            >
+                                {navHomeLink3}
+                            </Link>
+                            <Link to="/contact/#donationForm">
+                                <img
+                                    className="nav-cta animate-enter"
+                                    data-id="I148:989;113:590"
+                                    src={navCta}
+                                />
+                            </Link>
+                        </div>
+
+                        <div className="nav-right-mobile">
+                            {!isNavOpen ? (
+                                <img
+                                    onClick={toggleisNavOpen}
+                                    src={ham}
+                                    alt="hamburger icon to open menu"
+                                />
+                            ) : (
+                                <img
+                                    onClick={toggleisNavOpen}
+                                    src={closeHam}
+                                    alt="cross icon to close menu"
+                                />
+                            )}
+                            {isNavOpen && (
+                                <motion.div
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                    transition={{ duration: 0.2 }}
+                                    className="nav-mobile"
+                                >
+                                    <Link
+                                        onClick={toggleisNavOpen}
+                                        className="navLinks hvr-underline-from-center"
+                                        to="/"
+                                    >
+                                        Home
+                                    </Link>
+                                    <Link
+                                        onClick={toggleisNavOpen}
+                                        className="navLinks hvr-underline-from-center"
+                                        to="/about"
+                                    >
+                                        About
+                                    </Link>
+                                    <Link
+                                        onClick={toggleisNavOpen}
+                                        className="navLinks hvr-underline-from-center"
+                                        to="/contact"
+                                    >
+                                        Contact
+                                    </Link>
+                                    <Link
+                                        onClick={toggleisNavOpen}
+                                        className="navLinks hvr-underline-from-center"
+                                        to="/competition"
+                                    >
+                                        NVC
+                                    </Link>
+                                    <HeroCTA
+                                        text="Donate Now"
+                                        href="/contact#donationForm"
+                                    />
+                                </motion.div>
+                            )}
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </>
     );
 }
