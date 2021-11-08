@@ -37,28 +37,28 @@ function NavDesktop(props) {
             >
                 <Link
                     to="/"
-                    className="nav-home-link"
+                    className="nav-home-link hvr-underline-from-center"
                     data-id="I148:989;113:587"
                 >
                     {navHomeLink}
                 </Link>
                 <Link
                     to="/about"
-                    className="nav-home-link-1"
+                    className="nav-home-link-1 hvr-underline-from-center"
                     data-id="I148:989;113:588"
                 >
                     {navHomeLink2}
                 </Link>
                 <Link
                     to="/competition"
-                    className="nav-home-link-2"
+                    className="nav-home-link-2 hvr-underline-from-center"
                     data-id="I148:989;113:589"
                 >
                     NVC
                 </Link>
                 <Link
                     to="/contact"
-                    className="nav-home-link-2"
+                    className="nav-home-link-2 hvr-underline-from-center"
                     data-id="I148:989;113:589"
                 >
                     {navHomeLink3}
@@ -97,28 +97,28 @@ function NavDesktop(props) {
                         >
                             <Link
                                 onClick={toggleisNavOpen}
-                                className="navLinks"
+                                className="navLinks hvr-underline-from-center"
                                 to="/"
                             >
                                 Home
                             </Link>
                             <Link
                                 onClick={toggleisNavOpen}
-                                className="navLinks"
+                                className="navLinks hvr-underline-from-center"
                                 to="/about"
                             >
                                 About
                             </Link>
                             <Link
                                 onClick={toggleisNavOpen}
-                                className="navLinks"
+                                className="navLinks hvr-underline-from-center"
                                 to="/contact"
                             >
                                 Contact
                             </Link>
                             <Link
                                 onClick={toggleisNavOpen}
-                                className="navLinks"
+                                className="navLinks hvr-underline-from-center"
                                 to="/competition"
                             >
                                 NVC

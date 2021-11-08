@@ -1,5 +1,6 @@
 import React from "react";
 import * as css from "./HowItWorksCard.module.sass";
+import ReadMoreReact from "read-more-react";
 
 export default function HowItWorksCard({ img, title, description, heading }) {
     return (
@@ -9,7 +10,15 @@ export default function HowItWorksCard({ img, title, description, heading }) {
             </div>
             <div className={css.largeSpacer}>
                 <h3 className={css.title}>{title}</h3>
-                <p className={css.description}>{description}</p>
+                <p className={css.description}>
+                    <ReadMoreReact
+                        text={description}
+                        min={0}
+                        ideal={50}
+                        max={60}
+                        readMoreText="..."
+                    />
+                </p>
             </div>
         </div>
     );

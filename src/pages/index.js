@@ -32,8 +32,8 @@ export default function IndexPage(data) {
         if (e.landingPage.ourProjects) {
             ourProjects = e.landingPage.ourProjects;
         }
-        if (e.landingPage.whatWeDo) {
-            whatWeDo = e.landingPage.whatWeDo;
+        if (e.landingPage.ourVision) {
+            whatWeDo = e.landingPage.ourVision;
         }
         if (e.landingPage.howItWorks) {
             howItWorksData = e.landingPage.howItWorks;
@@ -104,7 +104,7 @@ export const query = graphql`
                             sourceUrl
                         }
                     }
-                    whatWeDo {
+                    ourVision {
                         title
                         description
                     }
