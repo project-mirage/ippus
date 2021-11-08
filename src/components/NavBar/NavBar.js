@@ -24,10 +24,10 @@ function NavBar({ page }) {
 export default NavBar;
 
 function NavDesktop(props) {
+    const { navHomeLink, navHomeLink2, navHomeLink3, navCta, page } = props;
     const { scrollY } = useViewportScroll();
     const [isNavOpen, toggleisNavOpen] = useToggle();
     const [opacity, setOpacity] = useState(page === "index" ? 0 : 1);
-    const { navHomeLink, navHomeLink2, navHomeLink3, navCta, page } = props;
     const scrollLocation = 500;
 
     scrollY.onChange((y) => {
