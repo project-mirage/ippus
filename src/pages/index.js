@@ -46,9 +46,6 @@ export default function IndexPage(data) {
         }
     }
 
-    // console.log(sliderData[0].ctaHref);
-    // console.log(sliderData[1].ctaHref);
-
     return (
         <>
             <Helmet>

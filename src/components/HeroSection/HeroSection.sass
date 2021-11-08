@@ -6,7 +6,6 @@
     display: flex
     justify-content: center
     align-items: center
-    // transform: translate(0, -7vh)
 
 .overlap-group-1
     position: relative
@@ -19,42 +18,51 @@
     top: 0
     width: 100vw
     height: 75vh
-    opacity: 0.4
+    opacity: 0.8
 
 .colorBg
-    background: rgba(0, 9, 43, 1)
+    background: linear-gradient(180deg, rgba(0, 9, 43, 0) 0%, rgb(0, 9, 43) 100%)
 
-.hero-title, .hero-title-1
-    left: 72px
-    letter-spacing: 3.00px
-    line-height: 170px
-
+.hero-title
+    font-family: Merriweather
+    font-style: normal
+    font-weight: 900
+    font-size: 36px !important
+    width: 50% !important
+    letter-spacing: 3px
+    font-feature-settings: 'case' on, 'liga' off
+    color: #FAFCFF
     text-align: center
-    top: 100px
-    width: 1296px
-    margin-top: 50px
 
 .heroSectionContainer
     display: flex
     justify-content: center
     align-items: center
-    flex-wrap: wrap
     width: 100vw
     height: fit-content
-    position: relative
     position: absolute
-    top: 55%
+    top: 90%
     left: 50%
     transform: translate(-50%, -50%)
 
 .image-slider
     background-size: cover
-    // padding-top: 20vh
 
 .controls
     display: flex
     justify-content: center
     align-items: center
     flex-wrap: wrap
-    width: 100%
-    margin-top: 50px
+    width: 50%
+
+@media screen and ( max-width: 750px )
+    .heroSectionContainer
+        flex-wrap: wrap
+        top: 75%
+
+    .controls
+        width: 100%
+
+    .hero-title
+        width: 100% !important
+        margin-bottom: 30px

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import HeroSliderPage from "../HeroSliderPage/HeroSliderPage";
 import HeroCTA from "../HeroCTA/HeroCTA";
 import "./HeroSection.sass";
 import Slider from "react-slick";
@@ -52,13 +51,11 @@ export default function HeroSection(props) {
                                 />
                             </div>
                             <div className="heroSectionContainer">
-                                <h1 className="hero-title merriweather-bold-soapstone-136px">
+                                <h1 className="hero-title">
                                     {e.title}
                                 </h1>
                                 <div className="controls">
                                     <HeroCTA href={e.ctaHref} text={e.cta} />
-                                    {/* {console.log(e.ctaHref)}
-                                    <Link to={e.ctaHref}>{e.cta}</Link> */}
                                 </div>
                             </div>
                         </>
