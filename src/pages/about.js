@@ -9,11 +9,6 @@ import favicon from "../images/icon.png";
 import { Helmet } from "react-helmet";
 
 export default function AboutPage(data) {
-    console.log(data);
-    // const contentSection =
-    //     data.data.allWpPage.nodes[0].aboutPage.contentSection;
-    // const ourTeam = data.data.allWpPage.nodes[0].aboutPage.ourTeam;
-
     let contentSection;
     let ourTeam;
 
@@ -27,9 +22,6 @@ export default function AboutPage(data) {
             ourTeam = e.aboutPage.ourTeam;
         }
     }
-
-    console.log(contentSection);
-    console.log(ourTeam);
 
     return (
         <>

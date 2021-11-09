@@ -1,32 +1,32 @@
 import React from "react";
-import * as css from "./DescriptionSection.module.sass";
+import "./DescriptionSection.sass";
 import ReadMoreReact from "read-more-react";
 
 export default function DescriptionSection({ heading, text }) {
     return (
-        <div className={css.section}>
+        <div className="section">
             <div
-                className={css.heading}
+                className="heading"
                 dangerouslySetInnerHTML={{ __html: heading }}
             />
             {/* <div
                 className={css.text}
                 dangerouslySetInnerHTML={{ __html: text }}
             /> */}
-            <div
+            {/* <div
                 className={css.text}
                 dangerouslySetInnerHTML={{ __html: text }}
-            >
-                {/* <ReadMoreReact
-                    className="read-more-button"
-                    text={text}
-                    min={500}
-                    // min={600}
-                    ideal={550}
-                    max={600}
-                    // readMoreText="read more"
-                /> */}
-            </div>
+            > */}
+            <ReadMoreReact
+                className="read-more-button"
+                text={text}
+                min={400}
+                // min={600}
+                ideal={450}
+                max={500}
+                readMoreText="..."
+            />
+            {/* </div> */}
         </div>
     );
 }
