@@ -34,6 +34,7 @@ export default function AboutPage(data) {
             {contentSection.map((e) => (
                 <FadeInUp>
                     <DescriptionSection
+                        readMore={true}
                         heading={e.aboutTitle}
                         text={e.aboutDescription}
                     />

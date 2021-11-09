@@ -49,6 +49,7 @@ export default function CompetitionPage(data) {
             {contentSection.map((e) => (
                 <FadeInUp>
                     <DescriptionSection
+                        readMore={false}
                         heading={e.sectionTitle}
                         text={e.sectionDescription}
                     />
