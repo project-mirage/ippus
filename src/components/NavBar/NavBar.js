@@ -24,7 +24,7 @@ function NavBar({ page }) {
 export default NavBar;
 
 function NavDesktop(props) {
-    const { navHomeLink, navHomeLink2, navHomeLink3, navCta, page } = props;
+    const { navHomeLink, navHomeLink2, navHomeLink3, page } = props;
     const { scrollY } = useViewportScroll();
     const [isNavOpen, toggleisNavOpen] = useToggle();
     const [opacity, setOpacity] = useState(page === "index" ? 0 : 1);
@@ -33,10 +33,9 @@ function NavDesktop(props) {
     scrollY.onChange((y) => {
         if (page === "index") {
             if (y >= scrollLocation) {
-                setOpacity(1);
-            }
-            if (y <= scrollLocation) {
-                setOpacity(0);
+                setOpacity(Math.min(Math.abs(1 - y / 500), 1));
+            } else if (y <= scrollLocation) {
+                setOpacity(0 - y / 500);
             }
         }
     });
