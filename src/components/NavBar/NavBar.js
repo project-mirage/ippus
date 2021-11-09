@@ -80,11 +80,12 @@ function NavDesktop(props) {
                 >
                     {navHomeLink3}
                 </Link>
-                <Link to="/contact/#donationForm">
-                    <img
-                        className="nav-cta animate-enter"
-                        data-id="I148:989;113:590"
-                        src={navCta}
+                <Link className="nav-home-link-2" to="/contact/#donationForm">
+                    <HeroCTA
+                        arrow={true}
+                        pointing={true}
+                        text="Donate Now"
+                        href="/contact#donationForm"
                     />
                 </Link>
             </div>
@@ -141,6 +142,7 @@ function NavDesktop(props) {
                                 NVC
                             </Link>
                             <HeroCTA
+                                arrow={true}
                                 text="Donate Now"
                                 href="/contact#donationForm"
                             />
