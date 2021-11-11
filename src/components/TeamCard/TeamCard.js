@@ -1,6 +1,6 @@
 import React from "react";
 import fbLogo from "../../images/fbLogo.png";
-import twitLogo from "../../images/twitLogo.png";
+import linkedinLogo from "../../images/linkedinLogo.png";
 import waLogo from "../../images/waLogo.svg";
 import * as css from "./TeamCard.module.sass";
 
@@ -8,7 +8,7 @@ export default function DescriptionSection({
     name,
     role,
     image,
-    twitLink,
+    linkedinLink,
     fbLink,
     waLink,
 }) {
@@ -22,21 +22,21 @@ export default function DescriptionSection({
             <div className={css.socials}>
                 {fbLink && (
                     <a target="_blank" rel="noopener noreferrer" href={fbLink}>
-                        <img src={fbLogo} alt="facebook logo" />
+                        <img className={css.logo} src={fbLogo} alt="facebook logo" />
                     </a>
                 )}
-                {twitLink && (
+                {linkedinLink && (
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href={twitLink}
+                        href={linkedinLink}
                     >
-                        <img src={twitLogo} alt="twitter logo" />
+                        <img className={css.logo} src={linkedinLogo} alt="linkedin logo" />
                     </a>
                 )}
                 {waLink && (
                     <a target="_blank" rel="noopener noreferrer" href={waLink}>
-                        <img src={waLogo} alt="whatsapp logo" />
+                        <img className={css.logo} src={waLogo} alt="whatsapp logo" />
                     </a>
                 )}
             </div>

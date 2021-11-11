@@ -19,7 +19,7 @@ export default function Collection({ heading, teamData }) {
                                     e.memberImage ? e.memberImage.sourceUrl : ""
                                 }
                                 waLink={e.whatsapp}
-                                twitLink={e.linkedin}
+                                linkedinLink={e.linkedin}
                                 fbLink={e.facebook}
                             />
                         ) : (
@@ -30,7 +30,7 @@ export default function Collection({ heading, teamData }) {
                                     e.judgeImage ? e.judgeImage.sourceUrl : ""
                                 }
                                 waLink={e.whatsapp}
-                                twitLink={e.linkedin}
+                                linkedinLink={e.linkedin}
                                 fbLink={e.facebook}
                             />
                         )}
