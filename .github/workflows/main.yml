@@ -29,8 +29,8 @@ jobs:
     - name: FTP Deploy
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
       with:
-        server: ftp.ippus.us
+        server: ftp.ippus.org
 #       upload only the compiled files
         local-dir: ./public/
-        username: u711976272.IPPUSADMIN
+        username: u711976272.adminIPPUS
         password: ${{ secrets.pw }}
