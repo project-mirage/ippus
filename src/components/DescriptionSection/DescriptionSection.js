@@ -9,21 +9,23 @@ export default function DescriptionSection({ heading, text, readMore }) {
                 className="heading"
                 dangerouslySetInnerHTML={{ __html: heading }}
             />
-            {readMore ? (
-                <ReadMoreReact
-                    className="read-more-button"
-                    text={text}
-                    min={400}
-                    ideal={450}
-                    max={500}
-                    readMoreText="..."
-                />
-            ) : (
-                <div
-                    className="display-text-group"
-                    dangerouslySetInnerHTML={{ __html: text }}
-                ></div>
-            )}
+            <div className="descriptionText">
+                {readMore ? (
+                    <ReadMoreReact
+                        className="read-more-button"
+                        text={text}
+                        min={400}
+                        ideal={450}
+                        max={500}
+                        readMoreText="..."
+                    />
+                ) : (
+                    <div
+                        className="display-text-group"
+                        dangerouslySetInnerHTML={{ __html: text }}
+                    />
+                )}
+            </div>
         </div>
     );
 }
