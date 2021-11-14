@@ -10,8 +10,8 @@ export default function WhatWeDoSection({ whatWeDoData }) {
     const images = [icon1, icon2, icon3];
 
     return (
-        <div className="wwd-section">
-            <h1 className="hero-title-1 merriweather-bold-darkblue-136px">
+        <>
+            <h1 className="heading merriweather-bold-darkblue-136px">
                 Our Vision
             </h1>
             <div className="wwd-details">
@@ -25,6 +25,6 @@ export default function WhatWeDoSection({ whatWeDoData }) {
                     </FadeInWhenVisible>
                 ))}
             </div>
-        </div>
+        </>
     );
 }

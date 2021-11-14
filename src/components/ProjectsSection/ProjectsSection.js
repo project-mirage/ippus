@@ -8,7 +8,7 @@ export default function App({ projectsData }) {
         <div className="wwd-section">
             <FadeInUp>
                 <h1
-                    className="hero-title-1 merriweather-bold-darkblue-136px"
+                    className="heading merriweather-bold-darkblue-136px"
                     data-id="148:879"
                 >
                     Our Projects

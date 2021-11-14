@@ -10,12 +10,17 @@
     font-family: Merriweather
     font-style: normal
     font-weight: bold
-    font-size: 96px
+    font-size: 5vw
     line-height: 110px
     text-align: center
     color: #000C19
     margin-bottom: 48px
     width: 100%
+
+@media screen and ( max-width: 600px )
+    .heading
+        letter-spacing: initial
+        font-size: max(5vh, 32px)
 
 .donationType
     font-family: "Inter"
@@ -80,10 +85,6 @@
     font-weight: 500
     color: white
 
-@media screen and ( max-width: 750px )
-    .heading
-        font-size: 48px
-        line-height: 50px
 
 @media screen and ( max-width: 1200px )
     .formContainer

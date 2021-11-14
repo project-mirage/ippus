@@ -21,13 +21,13 @@ function Component4(props) {
     return (
         <div className="component-4" data-id="189:1244">
             <h1
-                className="hero-title-1 merriweather-bold-darkblue-136px"
+                className="heading merriweather-bold-darkblue-136px"
                 data-id="148:881"
             >
                 {heroTitle}
             </h1>
             <div
-                className="hiw-sub-title inter-normal-midnight-24px animate-enter2"
+                className="hiw-sub-title inter-normal-blue-charcoal-16px"
                 data-id="148:976"
             >
                 {hiwSubTitle}

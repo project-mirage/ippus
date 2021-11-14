@@ -14,7 +14,7 @@ export default function ProjectCard(props) {
                     data-id="148:916"
                 ></div>
                 <h1
-                    className="op-mbfm-title inter-bold-midnight-32px"
+                    className="op-mbfm-title inter-bold-midnight-24px"
                     data-id="148:914"
                 >
                     {opMbfmTitle}

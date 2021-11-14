@@ -60,7 +60,7 @@ function NavDesktop(props) {
                 </Link>
                 <Link
                     to="/about"
-                    className="nav-home-link-1 hvr-underline-from-center"
+                    className="nav-home-link-2 hvr-underline-from-center"
                     data-id="I148:989;113:588"
                 >
                     {navHomeLink2}

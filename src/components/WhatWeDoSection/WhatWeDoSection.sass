@@ -1,10 +1,21 @@
-.hero-title-1
+.heading
     letter-spacing: 3.00px
     text-align: center
-    white-space: nowrap
-    font-size: 96px
+    font-size: 5vw
     margin-top: 100px
     width: 100%
+    font-weight: 700
+    font-family: "Merriweather"
+
+@media screen and ( max-width: 600px )
+    .heading
+        letter-spacing: initial
+        font-size: max(5vh, 32px)
+
+// @media screen and ( min-width: 600px )
+//     .heading
+//         font-size: 96px
+
 
 .wwd-details
     display: flex

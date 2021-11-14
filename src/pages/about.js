@@ -59,7 +59,6 @@ export const query = graphql`
                     ourTeam {
                         memberName
                         memberRole
-                        facebook
                         whatsapp
                         linkedin
                         memberImage {

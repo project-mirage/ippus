@@ -10,13 +10,13 @@ export default function WhatWeDoCard(props) {
                 <img className="wwd-power-icon" data-id="148:892" src={img} />
             </div>
             <h1
-                className="wwd-empowers-indus inter-bold-midnight-32px"
+                className="wwd-empowers-indus inter-bold-midnight-24px"
                 data-id="148:895"
             >
                 {wwdEmpowersIndus}
             </h1>
             <div
-                className="wwd-empower-copy inter-normal-midnight-20px"
+                className="wwd-empower-copy inter-normal-blue-charcoal-16px"
                 data-id="148:896"
             >
                 {wwdEmpowerCopy}
