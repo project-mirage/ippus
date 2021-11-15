@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "../components/NavBar/NavBar";
-import DescriptionSection from "../components/DescriptionSection/DescriptionSection";
+import DescriptionCollection from "../components/DescriptionSection/DescriptionCollection";
 import Footer from "../components/Footer/Footer";
 import Collection from "../components/TeamCard/Collection";
 import FadeInUp from "../animations/FadeInUp";
@@ -31,7 +31,7 @@ export default function AboutPage(data) {
             </Helmet>
             <NavBar />
 
-            {contentSection.map((e) => (
+            {/* {contentSection.map((e) => (
                 <FadeInUp>
                     <DescriptionSection
                         readMore={true}
@@ -39,7 +39,8 @@ export default function AboutPage(data) {
                         text={e.aboutDescription}
                     />
                 </FadeInUp>
-            ))}
+            ))} */}
+            <DescriptionCollection contentSection={contentSection} />
 
             <Collection heading="Our Team" teamData={ourTeam} />
             <Footer />

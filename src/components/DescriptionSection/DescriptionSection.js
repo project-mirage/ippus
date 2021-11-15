@@ -6,10 +6,10 @@ export default function DescriptionSection({ heading, text, readMore }) {
     return (
         <div className="section">
             <div
-                className="heading"
+                className="heading inter-bold-midnight-24px"
                 dangerouslySetInnerHTML={{ __html: heading }}
             />
-            <div className="descriptionText">
+            <div className="descriptionText inter-normal-blue-charcoal-16px">
                 {readMore ? (
                     <ReadMoreReact
                         className="read-more-button"

@@ -11,7 +11,7 @@ import favicon from "../images/icon.png";
 import { Helmet } from "react-helmet";
 
 export default function CompetitionPage(data) {
-    console.log(data);
+    // console.log(data);
 
     let contentSection;
     let nvcJudges;
@@ -30,9 +30,9 @@ export default function CompetitionPage(data) {
         }
     }
 
-    console.log(contentSection);
-    console.log(registerForm);
-    console.log(nvcJudges);
+    console.log(contentSection[1].sectionDescription);
+    // console.log(registerForm);
+    // console.log(nvcJudges);
 
     return (
         <>
